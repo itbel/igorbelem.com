@@ -16,7 +16,7 @@ const Navigation = (props) => {
       bg="dark"
       variant="dark"
       style={{
-        opacity: "0.75",
+        opacity: "1",
       }}
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
