@@ -2,9 +2,9 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact w-100">
       <h1>Contact Me:</h1>
-      <Form>
+      <Form className="justify-content-center">
         <Form.Group className="form-group">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" placeholder="Name" />

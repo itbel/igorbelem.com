@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const [selection, setSelection] = useState();
+
+  const handleSelection = () => {
+    props.onNavSelection(selection);
+  };
   return (
-    <div className="nav">
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        fixed="top"
-        bg="dark"
-        variant="dark"
-        style={{ opacity: "0.85" }}
-      >
-        <Navbar.Brand href="#home">Igor T. Belem</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+    <Navbar
+      className="nav"
+      collapseOnSelect
+      expand="lg"
+      fixed="top"
+      bg="dark"
+      variant="dark"
+      style={{
+        opacity: "0.75",
+      }}
+    >
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav
+          className="mr-auto mr-5"
+          onSelect={(selectedKey) => {
+            setSelection(selectedKey);
+            handleSelection();
+          }}
+        >
+          <Nav.Link eventKey="home">Home</Nav.Link>
+          <Nav.Link eventKey="about">About</Nav.Link>
+          <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
+          <Nav.Link eventKey="contact">Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
