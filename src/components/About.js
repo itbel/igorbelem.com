@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import vectorPerson from "./media/vectorperson.png";
+import FadeIn from "react-fade-in"; /*Replace this module with self made solution */
 
 const About = () => {
   return (
-    <div className="about pl-5 pr-5">
-      <h1>About Me:</h1>
+    <div className="about pl-5 pr-5 justify-content-center">
+      <h1 style={{ fontSize: "4rem" }}>About</h1>
       <br />
       <img
         alt=""
@@ -19,21 +20,18 @@ const About = () => {
       <br />
       <Row>
         <Col>
-          <p className="text-justify" style={{ fontSize: "2.1rem" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            nec purus ac lacus euismod efficitur non non neque. In luctus mauris
-            accumsan justo porta, nec bibendum urna venenatis. Maecenas ex
-            tellus, gravida ut eros at, accumsan volutpat enim. Proin a nisi
-            egestas, suscipit nulla vitae, ultricies neque.
-          </p>
-        </Col>
-        <Col>
-          <p className="text-justify" style={{ fontSize: "2.1rem" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            nec purus ac lacus euismod efficitur non non neque. In luctus mauris
-            accumsan justo porta, nec bibendum urna venenatis. Maecenas ex
-            tellus, gravida ut eros at, accumsan volutpat enim. Proin a nisi
-            egestas, suscipit nulla vitae, ultricies neque.
+          <p
+            style={{
+              fontSize: "2.1rem",
+              textJustify: "inter-character",
+              textAlign: "justify",
+            }}
+          >
+            I am an aspiring web development college graduate seeking to provide
+            services to your company as well as to improve my skills. I have a
+            good background in computer systems, and I have been working with
+            the MERN stack. I always strive to learn new and emerging
+            technologies.
           </p>
         </Col>
       </Row>

@@ -12,14 +12,8 @@ import { Row, Col } from "react-bootstrap";
 const Home = () => {
   return (
     <div className="home">
-      <div className="spacer">dad</div>
-      <Jumbotron
-        style={{
-          backgroundColor: "grey",
-          color: "black",
-          opacity: "0.95",
-        }}
-      >
+      <div className="spacer"></div>
+      <Jumbotron className="jumbo">
         <h1>
           <b>Igor Belem</b>
         </h1>
@@ -29,14 +23,27 @@ const Home = () => {
         <h3>
           <b>HTML/CSS, Javascript, React, NodeJS, Express, MongoDB</b>
         </h3>
-        <Row className="justify-content-center p-3">
+        <Row style={{ height: "3vh" }}></Row>
+        <Row className="justify-content-center">
           <Col>
             <img alt="" height="64" width="64" src={jsicon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={nodeicon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={cssicon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={bootstricon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={expressicon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={reacticon}></img>
+          </Col>
+          <Col>
             <img alt="" height="64" width="64" src={mongodbicon}></img>
           </Col>
         </Row>
@@ -46,3 +53,12 @@ const Home = () => {
 };
 
 export default Home;
+/*          <Col>
+            <img alt="" height="64" width="64" src={jsicon}></img>
+            <img alt="" height="64" width="64" src={nodeicon}></img>
+            <img alt="" height="64" width="64" src={cssicon}></img>
+            <img alt="" height="64" width="64" src={bootstricon}></img>
+            <img alt="" height="64" width="64" src={expressicon}></img>
+            <img alt="" height="64" width="64" src={reacticon}></img>
+            <img alt="" height="64" width="64" src={mongodbicon}></img>
+          </Col>*/

@@ -51,9 +51,7 @@ function App() {
       <div ref={aboutRef}>
         <About></About>
       </div>
-      <div ref={portRef}>
-        <Portfolio></Portfolio>
-      </div>
+      <div ref={portRef}></div>
       <div ref={contactRef}>
         <Contact></Contact>
       </div>

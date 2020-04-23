@@ -24,13 +24,18 @@ const Project = (props) => {
   return (
     <Card
       style={{
-        width: "36rem",
+        width: "24rem",
         backgroundColor: "rgb(24, 26, 27)",
       }}
     >
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100" src={props.img1} alt="First slide" />
+          <img
+            className="d-block w-100"
+            src={props.img1}
+            width={100}
+            alt="First slide"
+          />
           <Carousel.Caption>
             <h3>{imgLabel1}</h3>
             <p>{imgText1}</p>

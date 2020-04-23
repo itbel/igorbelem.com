@@ -16,19 +16,21 @@
 .about {
   padding-top: 60px;
   min-height: 100vh;
-  background-color: rgb(24, 26, 27);
+  color: black;
+  background-color: #dfdfdf;
 }
 
 .port {
   padding-top: 60px;
   min-height: 100vh;
-  background-color: rgb(31, 33, 35);
+  background-color: #dfdfdf;
+  color: black;
 }
 
 .contact {
   padding-top: 60px;
   min-height: 100vh;
-  background-color: rgb(24, 26, 27);
+  background-color: #333333;
 }
 
 .allShared {
@@ -59,5 +61,31 @@
 }
 
 .spacer {
-  min-height: 30vh;
+  min-height: 25vh;
+}
+.footerSpacer {
+  min-height: 40vh;
+}
+
+.contain {
+  object-fit: scale-down;
+}
+
+@media only screen and (max-width: 600px) {
+  .contactForm {
+    min-width: 90vw;
+  }
+  .jumbo {
+    min-width: 100vw;
+  }
+}
+.contactForm {
+  width: 40vw;
+  text-align: left;
+}
+
+.jumbo {
+  background-color: grey;
+  color: black;
+  opacity: 0.9;
 }

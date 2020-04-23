@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import { Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import chatapp from "./media/chatApp.png";
 
 const Portfolio = () => {
@@ -14,52 +14,62 @@ const Portfolio = () => {
   return (
     <div className="port">
       <h1>My Projects:</h1>
-      <Row className="w-100" style={{ marginRight: "0px", marginLeft: "0px" }}>
-        <Project
-          name={"React Chat Application"}
-          description={"Chat Application with MERN Stack and Socket.IO"}
-          img1={chatapp}
-          img2={chatapp}
-          img3={chatapp}
-          imageText1={imageText1}
-          imageText2={imageText2}
-          imageText3={imageText3}
-          imageLabel1={imageLabel1}
-          imageLabel2={imageLabel2}
-          imageLabel3={imageLabel3}
-        ></Project>
-
-        <Project
-          name={"swapiFetcher"}
-          description={
-            "React, Node/Express Application for data fetching from SWAPI"
-          }
-          img1={chatapp}
-          img2={chatapp}
-          img3={chatapp}
-          imageText1={imageText1}
-          imageText2={imageText2}
-          imageText3={imageText3}
-          imageLabel1={imageLabel1}
-          imageLabel2={imageLabel2}
-          imageLabel3={imageLabel3}
-        ></Project>
-
-        <Project
-          name={"footGuess"}
-          description={
-            "Soccer Guessing Tournaments Application using MERN Stack"
-          }
-          img1={chatapp}
-          img2={chatapp}
-          img3={chatapp}
-          imageText1={imageText1}
-          imageText2={imageText2}
-          imageText3={imageText3}
-          imageLabel1={imageLabel1}
-          imageLabel2={imageLabel2}
-          imageLabel3={imageLabel3}
-        ></Project>
+      <Row
+        style={{
+          marginRight: "0px",
+          marginLeft: "0px",
+          color: "white",
+        }}
+      >
+        <Col>
+          <Project
+            name={"React Chat Application"}
+            description={"Chat Application with MERN Stack and Socket.IO"}
+            img1={chatapp}
+            img2={chatapp}
+            img3={chatapp}
+            imageText1={imageText1}
+            imageText2={imageText2}
+            imageText3={imageText3}
+            imageLabel1={imageLabel1}
+            imageLabel2={imageLabel2}
+            imageLabel3={imageLabel3}
+          ></Project>
+        </Col>
+        <Col>
+          <Project
+            name={"swapiFetcher"}
+            description={
+              "React, Node/Express Application for data fetching from SWAPI"
+            }
+            img1={chatapp}
+            img2={chatapp}
+            img3={chatapp}
+            imageText1={imageText1}
+            imageText2={imageText2}
+            imageText3={imageText3}
+            imageLabel1={imageLabel1}
+            imageLabel2={imageLabel2}
+            imageLabel3={imageLabel3}
+          ></Project>
+        </Col>
+        <Col>
+          <Project
+            name={"footGuess"}
+            description={
+              "Soccer Guessing Tournaments Application using MERN Stack"
+            }
+            img1={chatapp}
+            img2={chatapp}
+            img3={chatapp}
+            imageText1={imageText1}
+            imageText2={imageText2}
+            imageText3={imageText3}
+            imageLabel1={imageLabel1}
+            imageLabel2={imageLabel2}
+            imageLabel3={imageLabel3}
+          ></Project>
+        </Col>
       </Row>
     </div>
   );

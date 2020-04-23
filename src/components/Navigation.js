@@ -16,7 +16,8 @@ const Navigation = (props) => {
       bg="dark"
       variant="dark"
       style={{
-        opacity: "1",
+        opacity: "0.9",
+        backgroundColor: "red",
       }}
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,7 +31,7 @@ const Navigation = (props) => {
         >
           <Nav.Link eventKey="home">Home</Nav.Link>
           <Nav.Link eventKey="about">About</Nav.Link>
-          <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
+          {/*<Nav.Link eventKey="portfolio">Portfolio</Nav.Link>*/}
           <Nav.Link eventKey="contact">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
