@@ -9,7 +9,7 @@ const Navigation = (props) => {
   };
   return (
     <Navbar
-      className="nav"
+      className="nav "
       collapseOnSelect
       expand="lg"
       fixed="top"
@@ -17,7 +17,6 @@ const Navigation = (props) => {
       variant="dark"
       style={{
         opacity: "0.9",
-        backgroundColor: "red",
       }}
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -6,7 +6,7 @@ import FadeIn from "react-fade-in"; /*Replace this module with self made solutio
 const About = () => {
   return (
     <div className="about pl-5 pr-5 justify-content-center">
-      <h1 style={{ fontSize: "4rem" }}>About</h1>
+      <h1 className="display-3">About</h1>
       <br />
       <img
         alt=""
@@ -20,13 +20,7 @@ const About = () => {
       <br />
       <Row>
         <Col>
-          <p
-            style={{
-              fontSize: "2.1rem",
-              textJustify: "inter-character",
-              textAlign: "justify",
-            }}
-          >
+          <p className="aboutPara font-weight-bold" style={{fontSize:"2.3rem"}}>
             I am an aspiring web development college graduate seeking to provide
             services to your company as well as to improve my skills. I have a
             good background in computer systems, and I have been working with

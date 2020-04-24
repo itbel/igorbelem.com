@@ -13,20 +13,22 @@ const Contact = () => {
             color: "black",
           }}
         >
-          <h1 style={{ fontSize: "4rem", textAlign: "center" }}>Contact</h1>
+          <h1 className="display-3" style={{ textAlign: "center" }}>Contact</h1>
           <br />
           <Form.Group>
-            <Form.Label>Name</Form.Label>
+            <Form.Label style={{marginLeft:"25%"}}>Name</Form.Label>
             <Form.Control
               className="form-group w-50"
+              style={{marginLeft:"25%"}}
               type="text"
               placeholder="Name"
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Email</Form.Label>
+            <Form.Label style={{marginLeft:"25%"}}>Email</Form.Label>
             <Form.Control
               className="form-group w-50"
+              style={{marginLeft:"25%"}}
               type="email"
               placeholder="Email"
             />
@@ -34,7 +36,7 @@ const Contact = () => {
           <Form.Group className="form-group w-100">
             <Form.Label>Message</Form.Label>
             <Form.Control
-              style={{ resize: "none" }}
+              style={{ resize: "none", padding:"16px" }}
               as="textarea"
               type="text"
               rows="6"

@@ -23,29 +23,15 @@ const Home = () => {
         <h3>
           <b>HTML/CSS, Javascript, React, NodeJS, Express, MongoDB</b>
         </h3>
-        <Row style={{ height: "3vh" }}></Row>
-        <Row className="justify-content-center">
-          <Col>
-            <img alt="" height="64" width="64" src={jsicon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={nodeicon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={cssicon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={bootstricon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={expressicon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={reacticon}></img>
-          </Col>
-          <Col>
-            <img alt="" height="64" width="64" src={mongodbicon}></img>
-          </Col>
+        <Row style={{ height: "3vh"}}></Row>
+        <Row className="justify-content-center iconRow">
+            <img alt="" height="68" width="68" src={jsicon}/>            
+            <img alt="" height="72" width="72" src={nodeicon}/>
+            <img alt="" height="68" width="68" src={cssicon}/>
+            <img alt="" height="68" width="68" src={bootstricon}/>
+            <img alt="" height="72" width="72" src={expressicon}/>
+            <img alt="" height="68" width="68" src={reacticon}/>
+            <img alt="" height="68" width="68" src={mongodbicon}/>
         </Row>
       </Jumbotron>
     </div>
