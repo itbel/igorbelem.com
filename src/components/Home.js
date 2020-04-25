@@ -7,14 +7,14 @@ import bootstricon from "./media/bootstrap.svg";
 import expressicon from "./media/express.svg";
 import reacticon from "./media/react.svg";
 import mongodbicon from "./media/mongodb.svg";
-import { Row, Col } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="spacer"></div>
       <Jumbotron className="jumbo">
-          <b style={{fontSize:"4.0rem"}}>Igor Belem</b>
+          <b style={{color:"black",fontSize:"2.5rem"}}>Igor Belem</b>
         <h1>
           <b>Full-Stack Developer</b>
         </h1>
