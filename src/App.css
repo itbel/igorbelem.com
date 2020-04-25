@@ -15,9 +15,10 @@
 
 .about {
   padding-top: 60px;
-  min-height: 100vh;
-  color: black;
-  background-color: #dfdfdf;
+  min-height: 50vh;
+  color:white;
+  background-color: #333333;
+
 }
 
 .port {
@@ -29,8 +30,9 @@
 
 .contact {
   padding-top: 60px;
-  min-height: 100vh;
-  background-color: #333333;
+  min-height: 50vh;
+  background-color: #dfdfdf;
+  color:black;
 }
 
 .allShared {
@@ -71,17 +73,24 @@
   object-fit: scale-down;
 }
 
+.contactTab{
+  text-align: left;
+  padding:10px;
+  border:2px solid darkgray;
+  box-shadow: 2px 2px darkgray;
+  border-radius: 16px 16px 16px 16px;
+  background-color: gray;
+  width:90px;
+  height:90px;
+}
+
 .aboutPara{
+  margin-left:3vw;
   text-align: left;
   padding-bottom:5vh;
   padding-left:32vw;
   padding-right:30vw;
-  color:#333333;
-}
-
-.contactForm {
-  width: 40vw;
-  text-align: left;
+  color:white;
 }
 
 .jumbo {
@@ -90,12 +99,14 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .contactForm {
-    min-width: 90vw;
+  .aboutPara{
+    padding-bottom:2vh;
+    padding-left:2vw;
+    padding-right:0;
   }
-  .jumbo {
-    padding:1px;
-  }
+}
+
+@media only screen and (max-width: 1400px) {
   .aboutPara{
     padding-bottom:2vh;
     padding-left:2vw;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import vectorPerson from "./media/vectorperson.png";
 import FadeIn from "react-fade-in"; /*Replace this module with self made solution */
 
@@ -7,7 +7,6 @@ const About = () => {
   return (
     <div className="about pl-5 pr-5 justify-content-center">
       <h1 className="display-3">About</h1>
-      <br />
       <img
         alt=""
         height="256"
@@ -15,12 +14,9 @@ const About = () => {
         src={vectorPerson}
         style={{ borderRadius: "256px 256px 256px 256px" }}
       ></img>
-      <br />
-      <br />
-      <br />
       <Row>
         <Col>
-          <p className="aboutPara font-weight-bold" style={{fontSize:"2.3rem"}}>
+          <p className="aboutPara" style={{fontSize:"2.8rem"}}>
             I am an aspiring web development college graduate seeking to provide
             services to your company as well as to improve my skills. I have a
             good background in computer systems, and I have been working with

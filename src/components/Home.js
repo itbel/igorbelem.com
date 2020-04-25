@@ -14,16 +14,14 @@ const Home = () => {
     <div className="home">
       <div className="spacer"></div>
       <Jumbotron className="jumbo">
+          <b style={{fontSize:"4.0rem"}}>Igor Belem</b>
         <h1>
-          <b>Igor Belem</b>
+          <b>Full-Stack Developer</b>
         </h1>
         <h2>
-          <b>Full-Stack Developer</b>
-        </h2>
-        <h3>
           <b>HTML/CSS, Javascript, React, NodeJS, Express, MongoDB</b>
-        </h3>
-        <Row style={{ height: "3vh"}}></Row>
+        </h2>
+        <Row style={{ height: "1vh"}}></Row>
         <Row className="justify-content-center iconRow">
             <img alt="" height="68" width="68" src={jsicon}/>            
             <img alt="" height="72" width="72" src={nodeicon}/>
