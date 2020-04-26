@@ -41,7 +41,7 @@ function App() {
   };
   useEffect(() => {
     scrollHandler();
-  }, [scrollHandler, selection]);
+  });
   return (
     <div className="allShared">
       <Navigation className="nav" onNavSelection={handleSelect}></Navigation>
@@ -51,7 +51,9 @@ function App() {
       <div ref={aboutRef}>
         <About></About>
       </div>
-      <div ref={portRef}></div>
+      <div ref={portRef}>
+        <Portfolio></Portfolio>
+      </div>
       <div ref={contactRef}>
         <Contact></Contact>
       </div>

@@ -30,7 +30,7 @@ const Navigation = (props) => {
         >
           <Nav.Link eventKey="home">Home</Nav.Link>
           <Nav.Link eventKey="about">About</Nav.Link>
-          {/*<Nav.Link eventKey="portfolio">Portfolio</Nav.Link>*/}
+          <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
           <Nav.Link eventKey="contact">Contact</Nav.Link>
           <Nav.Link target="_blank" href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view">CV</Nav.Link>
         </Nav>

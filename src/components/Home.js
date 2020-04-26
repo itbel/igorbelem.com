@@ -7,7 +7,7 @@ import bootstricon from "./media/bootstrap.svg";
 import expressicon from "./media/express.svg";
 import reacticon from "./media/react.svg";
 import mongodbicon from "./media/mongodb.svg";
-import { Row, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 const Home = () => {
   return (

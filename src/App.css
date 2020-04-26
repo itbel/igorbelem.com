@@ -20,6 +20,17 @@
   background-color: #333333;
 }
 
+.projectCube{
+  margin-left:3vw;
+  padding:16px;
+  background-color: lightgrey;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius:8px 8px 8px 8px;
+  width:25vw;
+  height:50vh;
+  
+}
+
 .port {
   padding-top: 60px;
   min-height: 100vh;
@@ -30,8 +41,10 @@
 .contact {
   padding-top: 30px;
   min-height: 20vh;
-  background-color: #dfdfdf;
-  color:black;
+  /*background-color: #dfdfdf;
+  color:black;*/
+  color:white;
+  background-color: #333333;
 }
 
 .allShared {
@@ -42,7 +55,7 @@
 
 .about p {
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+
 }
 
 ::-webkit-scrollbar {

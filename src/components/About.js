@@ -1,7 +1,5 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import vectorPerson from "./media/vectorperson.png";
-import FadeIn from "react-fade-in"; /*Replace this module with self made solution */
+import { Row, Col} from "react-bootstrap";
 
 const About = () => {
   return (
@@ -9,7 +7,6 @@ const About = () => {
       <h1 className="display-3">About</h1>
       <Row>
         <Col>
-        <FadeIn transitionDuration={6000}>
           <p className="aboutPara" style={{fontSize:"1.6rem"}}>
             I am an aspiring web development college graduate seeking to provide
             services to your company as well as to improve my skills. I have a
@@ -17,7 +14,6 @@ const About = () => {
             the MERN stack. I always strive to learn new and emerging
             technologies.
           </p>
-          </FadeIn>
         </Col>
       </Row>
     </div>
