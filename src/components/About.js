@@ -4,7 +4,7 @@ import { Row, Col} from "react-bootstrap";
 const About = () => {
   return (
     <div className="about pl-5 pr-5 justify-content-center">
-      <h1 className="display-3">About</h1>
+      <h1 className="display-4">About</h1>
       <Row>
         <Col>
           <p className="aboutPara" style={{fontSize:"1.6rem"}}>
@@ -21,14 +21,3 @@ const About = () => {
 };
 
 export default About;
-
-
-/*
-      <img
-        alt=""
-        height="256"
-        width="256"
-        src={vectorPerson}
-        style={{ borderRadius: "256px 256px 256px 256px" }}
-      ></img>
-      */

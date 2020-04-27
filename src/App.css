@@ -4,8 +4,8 @@
 }
 
 .home {
-  padding-top: 30px;
   min-height: 100vh;
+  padding-top:60px;
   background-image: url("./components/media/coding.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -13,38 +13,37 @@
   background-color: rgb(24, 26, 27);
 }
 
-.about {
-  padding-top: 60px;
-  min-height: 50vh;
-  color:white;
-  background-color: #333333;
-}
-
 .projectCube{
+  color:black;
   margin-left:3vw;
   padding:16px;
   background-color: lightgrey;
   box-shadow: 1px 1px 1px 1px #888888;
   border-radius:8px 8px 8px 8px;
-  width:25vw;
-  height:50vh;
+  width:23vw;
+  min-height:45vh;
   
+}
+
+.about {
+  padding-top: 60px;
+  min-height: 50vh;
+  color: black;
+  background-color: #dfdfdf;
 }
 
 .port {
   padding-top: 60px;
-  min-height: 100vh;
-  background-color: #dfdfdf;
-  color: black;
+  min-height: 70vh;
+  background-color: #333333;
+  color:lightgrey;
 }
 
 .contact {
   padding-top: 30px;
   min-height: 20vh;
-  /*background-color: #dfdfdf;
-  color:black;*/
+  background-color: #dfdfdf;
   color:white;
-  background-color: #333333;
 }
 
 .allShared {
@@ -55,7 +54,6 @@
 
 .about p {
   font-family: "Lato", sans-serif;
-
 }
 
 ::-webkit-scrollbar {
@@ -97,11 +95,11 @@
   padding-bottom:5vh;
   padding-left:32vw;
   padding-right:30vw;
-  color:white;
+  color:black;
 }
 
 .jumbo {
-  color:#2a2a2a;
+  color:black;
   background-color: rgba(169, 169, 169, .9);
 }
 
@@ -110,6 +108,12 @@
     padding-bottom:2vh;
     padding-left:2vw;
     padding-right:0;
+  }
+  .projectCube{
+    min-width:85vw;
+  }
+  .port{
+    padding-bottom:5vh;
   }
 }
 

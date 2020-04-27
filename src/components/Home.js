@@ -7,22 +7,22 @@ import bootstricon from "./media/bootstrap.svg";
 import expressicon from "./media/express.svg";
 import reacticon from "./media/react.svg";
 import mongodbicon from "./media/mongodb.svg";
+
 import { Row } from "react-bootstrap";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="spacer"></div>
-      <Jumbotron className="jumbo">
-          <b style={{color:"black",fontSize:"2.5rem"}}>Igor Belem</b>
-        <h1>
-          <b>Full-Stack Developer</b>
-        </h1>
+      <Jumbotron className="jumbo pt-3 pb-3">
+          <h1 className="font-weight-bold">Igor Belem</h1>
         <h2>
-          <b>HTML/CSS, Javascript, React, NodeJS, Express, MongoDB</b>
+          Full-Stack Developer
         </h2>
-        <Row style={{ height: "1vh"}}></Row>
-        <Row className="justify-content-center iconRow">
+        <h2>
+          HTML/CSS, Javascript, React, NodeJS, Express, MongoDB
+        </h2>
+        <Row style={{paddingTop:"2vh"}} className="justify-content-center iconRow">
             <img alt="" height="68" width="68" src={jsicon}/>            
             <img alt="" height="72" width="72" src={nodeicon}/>
             <img alt="" height="68" width="68" src={cssicon}/>
@@ -37,12 +37,3 @@ const Home = () => {
 };
 
 export default Home;
-/*          <Col>
-            <img alt="" height="64" width="64" src={jsicon}></img>
-            <img alt="" height="64" width="64" src={nodeicon}></img>
-            <img alt="" height="64" width="64" src={cssicon}></img>
-            <img alt="" height="64" width="64" src={bootstricon}></img>
-            <img alt="" height="64" width="64" src={expressicon}></img>
-            <img alt="" height="64" width="64" src={reacticon}></img>
-            <img alt="" height="64" width="64" src={mongodbicon}></img>
-          </Col>*/

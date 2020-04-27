@@ -6,7 +6,7 @@ import cv from "./media/cv.png";
 const Contact = () => {
   return (
     <div className="contact">
-      <div className="justify-content-center" style={{backgroundColor:"white", color:"black", width:"20%"}}>
+      <div className="justify-content-center" style={{ color:"black"}}>
       <p className="font-weight-bold">I can be reached at</p>
       <p><small>igortbelem@gmail.com</small></p>
       <a  href="https://github.com/itbel"><img className="contactTab" alt="" src={githublogo}/></a>
