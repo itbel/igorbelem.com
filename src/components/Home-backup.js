@@ -1,11 +1,12 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import jsicon from "./media/new/js_badge.svg";
-import nodeicon from "./media/new/nodejs_small.svg";
-import cssicon from "./media/new/css3.svg";
-import bootstricon from "./media/new/bootstrap.svg";
-import reacticon from "./media/new/react.svg";
-import mongodbicon from "./media/new/mongodb.svg";
+import jsicon from "./media/javascript.svg";
+import nodeicon from "./media/nodejs.svg";
+import cssicon from "./media/css3.svg";
+import bootstricon from "./media/bootstrap.svg";
+import expressicon from "./media/express.svg";
+import reacticon from "./media/react.svg";
+import mongodbicon from "./media/mongodb.svg";
 
 import { Row } from "react-bootstrap";
 
@@ -26,6 +27,7 @@ const Home = () => {
             <img alt="" height="72" width="72" src={nodeicon}/>
             <img alt="" height="68" width="68" src={cssicon}/>
             <img alt="" height="68" width="68" src={bootstricon}/>
+            <img alt="" height="72" width="72" src={expressicon}/>
             <img alt="" height="68" width="68" src={reacticon}/>
             <img alt="" height="68" width="68" src={mongodbicon}/>
         </Row>
