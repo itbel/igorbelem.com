@@ -6,6 +6,7 @@ import cssicon from "./media/new/css3.svg";
 import bootstricon from "./media/new/bootstrap.svg";
 import reacticon from "./media/new/react.svg";
 import mongodbicon from "./media/new/mongodb.svg";
+import expressjs from "./media/new/expressjs.png";
 
 import { Row } from "react-bootstrap";
 
@@ -22,12 +23,13 @@ const Home = () => {
           HTML/CSS, Javascript, React, NodeJS, Express, MongoDB
         </h2>
         <Row style={{paddingTop:"2vh"}} className="justify-content-center iconRow">
-            <img alt="" height="68" width="68" src={jsicon}/>            
-            <img alt="" height="72" width="72" src={nodeicon}/>
-            <img alt="" height="68" width="68" src={cssicon}/>
-            <img alt="" height="68" width="68" src={bootstricon}/>
-            <img alt="" height="68" width="68" src={reacticon}/>
-            <img alt="" height="68" width="68" src={mongodbicon}/>
+            <img alt="" height="68" src={jsicon}/>            
+            <img alt="" height="68" src={nodeicon}/>
+            <img alt="" height="68" src={cssicon}/>
+            <img alt="" src={expressjs}/>
+            <img alt="" height="68" src={bootstricon}/>
+            <img alt="" height="68" src={reacticon}/>
+            <img alt="" height="68" src={mongodbicon}/>
         </Row>
       </Jumbotron>
     </div>
