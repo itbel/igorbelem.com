@@ -20,8 +20,9 @@
   background-color: lightgrey;
   box-shadow: 1px 1px 1px 1px #888888;
   border-radius:8px 8px 8px 8px;
-  width:23vw;
-  min-height:45vh;
+  min-width:23vw;
+  max-width:23vw;
+  height:45vh;
   
 }
 
@@ -41,7 +42,7 @@
 
 .contact {
   padding-top: 30px;
-  min-height: 20vh;
+  min-height: 15vh;
   background-color: #dfdfdf;
   color:white;
 }
@@ -111,6 +112,7 @@
   }
   .projectCube{
     min-width:85vw;
+    height:45vh;
   }
   .port{
     padding-bottom:5vh;

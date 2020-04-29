@@ -1,12 +1,12 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import jsicon from "./media/new/js_badge.svg";
-import nodeicon from "./media/new/nodejs_small.svg";
-import cssicon from "./media/new/css3.svg";
-import bootstricon from "./media/new/bootstrap.svg";
-import reacticon from "./media/new/react.svg";
-import mongodbicon from "./media/new/mongodb.svg";
-import expressjs from "./media/new/expressjs.png";
+import jsicon from "./media/js_badge.svg";
+import nodeicon from "./media/nodejs_small.svg";
+import cssicon from "./media/css3.svg";
+import bootstricon from "./media/bootstrap.svg";
+import reacticon from "./media/react.svg";
+import mongodbicon from "./media/mongodb.svg";
+import expressjs from "./media/expressjs.png";
 
 import { Row } from "react-bootstrap";
 
