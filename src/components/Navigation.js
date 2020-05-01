@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
 const Navigation = (props) => {
-  const [selection, setSelection] = useState();
-
-  const handleSelection = () => {
-    props.onNavSelection(selection);
-  };
+  const sendData = (key) =>{
+    props.onNavSelection(key)
+  }
   return (
     <Navbar
       className="nav "
@@ -21,13 +19,7 @@ const Navigation = (props) => {
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav
-          className="mr-auto mr-5"
-          onSelect={(selectedKey) => {
-            setSelection(selectedKey);
-            handleSelection();
-          }}
-        >
+        <Nav className="mr-auto mr-5" onSelect={(selectedKey)=>sendData(selectedKey)}>
           <Nav.Link eventKey="home">Home</Nav.Link>
           <Nav.Link eventKey="about">About</Nav.Link>
           <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
