@@ -1,6 +1,9 @@
 .nav {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-family: "Lato", sans-serif;
+  background-color: #404040;
+  font-weight: bold;
+  padding: 2px;
 }
 
 .home {
@@ -40,15 +43,14 @@
   background-color: #dfdfdf;
 }
 .skillTab {
-  width: 12vw;
-  justify-content: start;
+  width: 7vw;
+  min-width: 7vw;
   display: inline-block;
 }
-.skillTab :hover {
+.skillTab:hover {
   background-color: lightslategray;
   transition: all 0.3s ease-out;
 }
-
 .port {
   padding-top: 60px;
   min-height: 70vh;
@@ -121,7 +123,7 @@
   background-color: rgba(180, 180, 180, 0.9);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .aboutPara {
     padding-bottom: 2vh;
     padding-left: 2vw;
@@ -146,11 +148,6 @@
     padding-right: 0;
   }
 }
-.iconRow {
-  padding-left: "20vw";
-  padding-right: "20vw";
-}
-
 img {
   padding: 6px;
 }
