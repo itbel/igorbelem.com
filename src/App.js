@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 function App() {
@@ -49,6 +50,7 @@ function App() {
         </div>
         <div ref={aboutRef}>
         <About></About>
+        <Skills></Skills>
         </div>
         <div ref={portRef}>
         <Portfolio></Portfolio>

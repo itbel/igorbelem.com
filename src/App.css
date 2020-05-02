@@ -5,7 +5,7 @@
 
 .home {
   min-height: 100vh;
-  padding-top:60px;
+  padding-top: 60px;
   background-image: url("./components/media/coding.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -13,38 +13,54 @@
   background-color: rgb(24, 26, 27);
 }
 
-.projectCube{
-  color:black;
-  margin-left:3vw;
-  padding:16px;
+.projectCube {
+  color: black;
+  margin-left: 3vw;
+  padding: 16px;
   background-color: lightgrey;
   box-shadow: 1px 1px 1px 1px #888888;
-  border-radius:8px 8px 8px 8px;
-  min-width:23vw;
-  max-width:23vw;
-  height:45vh;
-  
+  border-radius: 8px 8px 8px 8px;
+  min-width: 23vw;
+  max-width: 23vw;
+  height: 45vh;
 }
 
 .about {
-  padding-top: 60px;
+  padding-top: 50px;
+  min-height: 50vh;
+  background-color: #b2b2b2;
+  color: #333333;
+}
+
+.skills {
+  font-weight: bold;
+  padding-top: 50px;
   min-height: 50vh;
   color: black;
   background-color: #dfdfdf;
+}
+.skillTab {
+  width: 12vw;
+  justify-content: start;
+  display: inline-block;
+}
+.skillTab :hover {
+  background-color: lightslategray;
+  transition: all 0.3s ease-out;
 }
 
 .port {
   padding-top: 60px;
   min-height: 70vh;
   background-color: #333333;
-  color:lightgrey;
+  color: lightgrey;
 }
 
 .contact {
   padding-top: 30px;
-  min-height: 15vh;
+  min-height: 100vh;
   background-color: #dfdfdf;
-  color:white;
+  color: white;
 }
 
 .allShared {
@@ -55,6 +71,7 @@
 
 .about p {
   font-family: "Lato", sans-serif;
+  color: #333333;
 }
 
 ::-webkit-scrollbar {
@@ -84,53 +101,56 @@
   object-fit: scale-down;
 }
 
-.contactTab{
+.contactTab {
   text-align: left;
-  width:64px;
-  padding:10px;
+  width: 64px;
+  padding: 10px;
 }
 
-.aboutPara{
-  margin-left:3vw;
+.aboutPara {
+  margin-left: 3vw;
   text-align: left;
-  padding-bottom:5vh;
-  padding-left:32vw;
-  padding-right:30vw;
-  color:black;
+  padding-bottom: 2vh;
+  padding-left: 32vw;
+  padding-right: 30vw;
+  color: lightgray;
 }
 
 .jumbo {
-  color:black;
+  color: black;
   background-color: rgba(180, 180, 180, 0.9);
 }
 
 @media only screen and (max-width: 600px) {
-  .aboutPara{
-    padding-bottom:2vh;
-    padding-left:2vw;
-    padding-right:0;
+  .aboutPara {
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 0;
   }
-  .projectCube{
-    min-width:85vw;
-    height:45vh;
+  .projectCube {
+    min-width: 85vw;
+    height: 45vh;
   }
-  .port{
-    padding-bottom:5vh;
+  .port {
+    padding-bottom: 5vh;
+  }
+  .skillTab {
+    width: 25vw;
   }
 }
 
 @media only screen and (max-width: 1400px) {
-  .aboutPara{
-    padding-bottom:2vh;
-    padding-left:2vw;
-    padding-right:0;
+  .aboutPara {
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 0;
   }
 }
-.iconRow{
-  padding-left:"20vw";
-  padding-right:"20vw"; 
+.iconRow {
+  padding-left: "20vw";
+  padding-right: "20vw";
 }
 
 img {
-  padding:6px;
+  padding: 6px;
 }

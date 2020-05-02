@@ -1,36 +1,29 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import jsicon from "./media/js_badge.svg";
-import nodeicon from "./media/nodejs_small.svg";
-import cssicon from "./media/css3.svg";
-import bootstricon from "./media/bootstrap.svg";
-import reacticon from "./media/react.svg";
-import mongodbicon from "./media/mongodb.svg";
-import expressjs from "./media/expressjs.png";
 
-import { Row } from "react-bootstrap";
+import githublogo from "./media/github.svg";
+import linkedinlogo from "./media/LI.svg";
+import cv from "./media/cv.png";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="spacer"></div>
       <Jumbotron className="jumbo pt-3 pb-3">
-          <h1 className="font-weight-bold">Igor Belem</h1>
-        <h2>
-          Full-Stack Developer
-        </h2>
-        <h2>
-          HTML/CSS, Javascript, React, NodeJS, Express, MongoDB
-        </h2>
-        <Row style={{paddingTop:"2vh"}} className="justify-content-center iconRow">
-            <img alt="" height="68" src={jsicon}/>            
-            <img alt="" height="68" src={nodeicon}/>
-            <img alt="" height="68" src={cssicon}/>
-            <img alt="" src={expressjs}/>
-            <img alt="" height="68" src={bootstricon}/>
-            <img alt="" height="68" src={reacticon}/>
-            <img alt="" height="68" src={mongodbicon}/>
-        </Row>
+        <h1 className="font-weight-bold">Igor Belem</h1>
+        <h2>Full-Stack Developer</h2>
+        <h6>Toronto, ON, Canada</h6>
+        <div className="justify-content-center" style={{ color: "black" }}>
+          <a href="https://github.com/itbel">
+            <img className="contactTab" alt="" src={githublogo} />
+          </a>
+          <a href="https://www.linkedin.com/in/igor-belem">
+            <img className="contactTab" alt="" src={linkedinlogo} />
+          </a>
+          <a href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view?usp=sharing">
+            <img className="contactTab" alt="" src={cv} />
+          </a>
+        </div>
       </Jumbotron>
     </div>
   );
