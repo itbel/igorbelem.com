@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button, Container, Col, Row } from "react-bootstrap";
 const Contact = () => {
   return (
-    <div className="contact pl-5 pr-5 justify-content-center">
+    <div className="contact pl-5 pr-5 pb-5 justify-content-center">
       <h1 className="display-4">Contact</h1>
       <br></br>
       <h5>Feel free to contact me and I'll respond as soon as I can</h5>

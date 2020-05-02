@@ -133,6 +133,9 @@
     min-width: 85vw;
     height: 45vh;
   }
+  .projectCube img {
+    max-height: 65%;
+  }
   .port {
     padding-bottom: 5vh;
   }
