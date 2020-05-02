@@ -33,7 +33,9 @@ const Contact = () => {
                   rows="8"
                 />
               </Form.Group>
-              <Button style={{ width: "100%" }}>Submit Message</Button>
+              <Button variant="dark" style={{ width: "100%" }}>
+                Submit Message
+              </Button>
             </Form>
           </Col>
         </Row>
