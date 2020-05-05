@@ -1,6 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button, Container, Col, Row } from "react-bootstrap";
+import axios from "axios";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [mailSent, setMailSent] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (name.length > 0 && email.length > 0 && message.length > 0) {
+      if (message.length > 10) {
+        if (message.length < 10000) {
+          let emailData = {
+            name: name,
+            email: email,
+            message: message,
+            mailSent: mailSent,
+            error: error,
+          };
+          axios({
+            method: "post",
+            url: `${"/api/index.php"}`,
+            headers: { "content-type": "application/json" },
+            data: emailData,
+          })
+            .then((result) => {
+              setMailSent(result.data.sent);
+              alert("Email sent successfully!");
+            })
+            .catch((error) => {
+              setError(error.message);
+              alert("Unable to sent message.");
+            });
+          setName("");
+          setEmail("");
+          setMessage("");
+        } else {
+          alert("Message must not exceed 10,000 characters");
+        }
+      } else {
+        alert("Message length must be greater than 10");
+      }
+    } else {
+      alert("All fields must be entered!");
+    }
+  };
   return (
     <div className="contact pl-5 pr-5 pb-5 justify-content-center">
       <h1 className="display-4">Contact</h1>
@@ -16,24 +63,37 @@ const Contact = () => {
             </p>
           </Col>
           <Col>
-            <Form style={{ textAlign: "left" }}>
+            <Form style={{ textAlign: "left" }} onSubmit={handleSubmit}>
               <h4>Get in touch</h4>
-              <Form.Group>
+              <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Your name" />
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Your email" />
+                <Form.Control
+                  value={name}
+                  type="text"
+                  placeholder="Your name"
+                  onChange={(e) => setName(e.target.value)}
+                />
               </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect2"></Form.Group>
-              <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Group controlId="email">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  value={email}
+                  type="email"
+                  placeholder="Your email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group controlId="message">
                 <Form.Label>Message:</Form.Label>
                 <Form.Control
+                  value={message}
                   as="textarea"
                   placeholder="Your message"
                   rows="8"
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>
-              <Button variant="dark" style={{ width: "100%" }}>
+              <Button type="submit" variant="dark" style={{ width: "100%" }}>
                 Submit Message
               </Button>
             </Form>

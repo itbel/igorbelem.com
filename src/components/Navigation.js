@@ -17,10 +17,7 @@ const Navigation = (props) => {
       }}
     >
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse
-        style={{ textAlign: "left", padding: "8px" }}
-        id="basic-navbar-nav"
-      >
+      <Navbar.Collapse style={{ textAlign: "left" }} id="basic-navbar-nav">
         <Nav
           className="mr-auto mr-5"
           style={{ textAlign: "center" }}

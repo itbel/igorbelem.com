@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
@@ -41,23 +41,23 @@ function App() {
         block: "start",
       });
     }
-  },[selection]);
+  }, [selection]);
   return (
     <div className="allShared">
       <Navigation className="nav" onNavSelection={handleSelect}></Navigation>
       <div ref={homeRef}>
         <Home></Home>
-        </div>
-        <div ref={aboutRef}>
+      </div>
+      <div ref={aboutRef}>
         <About></About>
         <Skills></Skills>
-        </div>
-        <div ref={portRef}>
+      </div>
+      <div ref={portRef}>
         <Portfolio></Portfolio>
-        </div>
-        <div ref={contactRef}>
+      </div>
+      <div ref={contactRef}>
         <Contact></Contact>
-        </div>
+      </div>
     </div>
   );
 }

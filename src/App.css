@@ -2,7 +2,6 @@
   font-size: 1.1rem;
   font-family: "Lato", sans-serif;
   background-color: #404040;
-  font-weight: bold;
   padding: 2px;
 }
 
@@ -35,9 +34,10 @@ img {
 .spacer {
   min-height: 25vh;
 }
+
 /* ABOUT */
 .about {
-  padding-top: 50px;
+  padding-top: 60px;
   min-height: 50vh;
   background-color: #b2b2b2;
   color: #333333;
@@ -83,7 +83,6 @@ img {
   border-radius: 8px 8px 8px 8px;
   min-width: 23vw;
   max-width: 23vw;
-  height: 45vh;
 }
 
 .port {
@@ -138,7 +137,6 @@ img {
 }
 
 /* SCROLLBAR */
-
 ::-webkit-scrollbar {
   background-color: lightgrey;
   width: 16px;

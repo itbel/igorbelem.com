@@ -10,18 +10,20 @@ const Project = (props) => {
     setDescription(props.description);
     setRepo(props.repo);
     setPic(props.pic);
-  },[props.name, props.description, props.repo, props.pic]);
+  }, [props.name, props.description, props.repo, props.pic]);
   return (
     <div className="projectCube">
       <h3>{name}</h3>
       <h6>{description}</h6>
-      <img
-            className="d-block w-100"
-            src={pic}
-            alt=""
-            height={250}
-          />
-      <a target="_blank" rel="noopener noreferrer" href={repo} className="btn btn-dark">View Code</a>
+      <img className="d-block w-100" src={pic} alt="" height={250} />
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={repo}
+        className="btn btn-dark"
+      >
+        View Code
+      </a>
     </div>
   );
 };
