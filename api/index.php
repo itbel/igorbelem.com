@@ -5,8 +5,7 @@ $_POST = json_decode($rest_json, true);
 
 if (empty($_POST['name']) && empty($_POST['email'])) die();
 
-if ($_POST)
-	{
+if ($_POST){
 	http_response_code(200);
 	$subject = $_POST['name'];
 	$to = "admin@igorbelem.com";
@@ -19,10 +18,9 @@ if ($_POST)
 	echo json_encode(array(
 		"sent" => true
 	));
-	}
-  else
-	{
-		echo json_encode(["sent" => false, "message" => "Something went wrong"]);
-	}
+}
+else{
+	echo json_encode(["sent" => false, "message" => "Something went wrong"]);
+}
 
 ?>
