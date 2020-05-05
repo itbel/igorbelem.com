@@ -15,7 +15,14 @@ const Project = (props) => {
     <div className="projectCube">
       <h3>{name}</h3>
       <h6>{description}</h6>
-      <img className="d-block w-100" src={pic} alt="" height={250} />
+      <img
+        style={{ border: "1px solid black" }}
+        className="d-block w-100"
+        src={pic}
+        alt=""
+        height={250}
+      />
+      <br></br>
       <a
         target="_blank"
         rel="noopener noreferrer"

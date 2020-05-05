@@ -14,14 +14,29 @@ const Home = () => {
         <h2>Full-Stack Developer</h2>
         <h6>Toronto, ON, Canada</h6>
         <div className="justify-content-center" style={{ color: "black" }}>
-          <a href="https://github.com/itbel">
-            <img className="contactTab" alt="" src={githublogo} />
+          <a
+            href="https://github.com/itbel"
+            aria-label="Github"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="contactTab" alt="githubIcon" src={githublogo} />
           </a>
-          <a href="https://www.linkedin.com/in/igor-belem">
-            <img className="contactTab" alt="" src={linkedinlogo} />
+          <a
+            href="https://www.linkedin.com/in/igor-belem"
+            aria-label="Linked In"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="contactTab" alt="linkedinIcon" src={linkedinlogo} />
           </a>
-          <a href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view?usp=sharing">
-            <img className="contactTab" alt="" src={cv} />
+          <a
+            href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view?usp=sharing"
+            aria-label="Resume"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="contactTab" alt="cvIcon" src={cv} />
           </a>
         </div>
       </Jumbotron>

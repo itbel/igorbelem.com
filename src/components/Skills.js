@@ -19,43 +19,43 @@ const Skills = () => {
           <Col>
             <Row className="justify-content-center">
               <Figure className="skillTab">
-                <Figure.Image src={jsicon} width={68} />
+                <Figure.Image src={jsicon} width={68} alt="js" />
                 <Figure.Caption>JavaScript</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={nodeicon} width={68} />
+                <Figure.Image src={nodeicon} width={68} alt="node" />
                 <Figure.Caption>Node</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={reacticon} width={68} />
+                <Figure.Image src={reacticon} width={68} alt="react" />
                 <Figure.Caption>React</Figure.Caption>
               </Figure>
             </Row>
             <Row className="justify-content-center">
               <Figure className="skillTab">
-                <Figure.Image src={cssicon} width={68} />
+                <Figure.Image src={cssicon} width={68} alt="css3" />
                 <Figure.Caption>CSS3</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={bootstricon} width={68} />
+                <Figure.Image src={bootstricon} width={68} alt="bootstrap" />
                 <Figure.Caption>Bootstrap</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={html5} width={68} />
+                <Figure.Image src={html5} width={68} alt="html5" />
                 <Figure.Caption>HTML5</Figure.Caption>
               </Figure>
             </Row>
             <Row className="justify-content-center">
               <Figure className="skillTab">
-                <Figure.Image src={expressjs} />
+                <Figure.Image src={expressjs} alt="express" />
                 <Figure.Caption>Express</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={mongodbicon} width={68} />
+                <Figure.Image src={mongodbicon} width={68} alt="mongodb" />
                 <Figure.Caption>MongoDB</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={php} width={68} />
+                <Figure.Image src={php} width={68} alt="php" />
                 <Figure.Caption>PHP</Figure.Caption>
               </Figure>
             </Row>

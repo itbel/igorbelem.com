@@ -62,7 +62,7 @@ const Contact = () => {
               <small>igortbelem@gmail.com</small>
             </p>
           </Col>
-          <Col>
+          <Col xs={12} lg={8}>
             <Form style={{ textAlign: "left" }} onSubmit={handleSubmit}>
               <h4>Get in touch</h4>
               <Form.Group controlId="name">
