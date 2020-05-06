@@ -19,25 +19,17 @@ const Navigation = (props) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse style={{ textAlign: "left" }} id="basic-navbar-nav">
         <Nav
+          activeKey={""}
           className="mr-auto mr-5"
           style={{ textAlign: "center" }}
           onSelect={(selectedKey) => {
             sendData(selectedKey);
-            selectedKey = null;
           }}
         >
-          <Nav.Link className="nostyl" eventKey="home">
-            Home
-          </Nav.Link>
-          <Nav.Link className="nostyl" eventKey="about">
-            About
-          </Nav.Link>
-          <Nav.Link className="nostyl" eventKey="portfolio">
-            Portfolio
-          </Nav.Link>
-          <Nav.Link className="nostyl" eventKey="contact">
-            Contact
-          </Nav.Link>
+          <Nav.Link eventKey="home">Home</Nav.Link>
+          <Nav.Link eventKey="about">About</Nav.Link>
+          <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
+          <Nav.Link eventKey="contact">Contact</Nav.Link>
           <Nav.Link
             target="_blank"
             href="https://docs.google.com/document/d/1Yeg_P6NTCpHSk3jo9o0cuLe7PzTUgDUV44DpseqxFTA/edit?usp=sharing"

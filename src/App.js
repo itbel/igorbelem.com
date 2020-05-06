@@ -13,8 +13,34 @@ function App() {
   const portRef = useRef();
   const contactRef = useRef();
   const [selection, setSelection] = useState("home");
+  /* REDUNDANT CODE REVIEW REQUIRED*/
   const handleSelect = (select) => {
     setSelection(select);
+    console.log(`received ${selection} in app.js`);
+    if (selection === "home") {
+      homeRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    if (selection === "about") {
+      aboutRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    if (selection === "portfolio") {
+      portRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    if (selection === "contact") {
+      contactRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
   useEffect(() => {
     if (selection === "home") {
@@ -41,7 +67,7 @@ function App() {
         block: "start",
       });
     }
-  }, [selection]);
+  }, [selection, setSelection]);
   return (
     <div className="allShared">
       <Navigation className="nav" onNavSelection={handleSelect}></Navigation>

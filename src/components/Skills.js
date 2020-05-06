@@ -6,18 +6,18 @@ import cssicon from "./media/css3.svg";
 import bootstricon from "./media/bootstrap.svg";
 import reacticon from "./media/react.svg";
 import mongodbicon from "./media/mongodb.svg";
-import expressjs from "./media/expressjs.png";
-import html5 from "./media/html5.png";
+import expressjs from "./media/expressjs.svg";
+import html5 from "./media/html5.svg";
 import php from "./media/php.svg";
 const Skills = () => {
   return (
-    <div className="skills pl-5 pr-5 pb-3 justify-content-center">
+    <div className="skills justify-content-center">
       <h1 className="display-4">Skills</h1>
 
-      <Row>
-        <Container>
+      <Row className="m-0">
+        <Container style={{ padding: "32px" }}>
           <Col>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center m-0">
               <Figure className="skillTab">
                 <Figure.Image src={jsicon} width={68} alt="js" />
                 <Figure.Caption>JavaScript</Figure.Caption>
@@ -47,7 +47,7 @@ const Skills = () => {
             </Row>
             <Row className="justify-content-center">
               <Figure className="skillTab">
-                <Figure.Image src={expressjs} alt="express" />
+                <Figure.Image src={expressjs} width={68} alt="express" />
                 <Figure.Caption>Express</Figure.Caption>
               </Figure>
               <Figure className="skillTab">

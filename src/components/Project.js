@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Image } from "react-bootstrap";
 const Project = (props) => {
   const [name, setName] = useState();
   const [description, setDescription] = useState();
@@ -14,8 +15,10 @@ const Project = (props) => {
   return (
     <div className="projectCube">
       <h3>{name}</h3>
-      <h6>{description}</h6>
-      <img
+
+      <small>{description}</small>
+
+      <Image
         style={{ border: "1px solid black" }}
         className="d-block w-100"
         src={pic}
