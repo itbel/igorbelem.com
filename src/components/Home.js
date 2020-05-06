@@ -2,8 +2,8 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 import githublogo from "./media/github.svg";
-import linkedinlogo from "./media/LI.svg";
-import cv from "./media/cv.png";
+import linkedinlogo from "./media/LIblack.svg";
+import cv from "./media/cv.svg";
 
 const Home = () => {
   return (
