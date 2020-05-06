@@ -9,6 +9,11 @@
   background-color: #404040;
   padding: 2px;
 }
+.navbar-nav {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* LANDING */
 .home {
