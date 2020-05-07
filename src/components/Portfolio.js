@@ -9,8 +9,11 @@ const Portfolio = () => {
   return (
     <div className="port">
       <h1 className="display-4">My Projects:</h1>
-      <Row style={{ margin: 0, paddingTop: "32px" }}>
-        <Col style={{ paddingBottom: "16px" }}>
+      <Row
+        className="justify-content-center"
+        style={{ margin: "auto", paddingBottom: "5%" }}
+      >
+        <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
             name={"swapiFetcher"}
             description={"React, Node/Express App for data fetching from SWAPI"}
@@ -18,17 +21,17 @@ const Portfolio = () => {
             pic={swapi}
           ></Project>
         </Col>
-        <Col style={{ paddingBottom: "16px" }}>
+        <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
-            name={"React Chat Application"}
+            name={"ReactChatApplication"}
             description={"Chat Application with MERN Stack and Socket.IO"}
             repo={"https://github.com/itbel/ReactChatApplication"}
             pic={chatapp}
           ></Project>
         </Col>
-        <Col style={{ paddingBottom: "16px" }}>
+        <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
-            name={"Personal Portfolio"}
+            name={"igorbelem.com"}
             description={"React based portfolio"}
             repo={"https://github.com/itbel/portfolio"}
             pic={portfolio}

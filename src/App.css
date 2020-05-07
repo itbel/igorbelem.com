@@ -67,6 +67,7 @@
   width: 7vw;
   min-width: 7vw;
   display: inline-block;
+  border-radius: 8px 8px 8px 8px;
 }
 .skillTab:hover {
   background-color: lightslategray;
@@ -75,17 +76,18 @@
 
 /* PORTFOLIO */
 .projectCube {
+  border-radius: 8px 8px 8px 8px;
+  margin-top: 5%;
   color: black;
-  margin-left: 3vw;
-  padding: 16px;
   background-color: lightgrey;
   box-shadow: 1px 1px 1px 1px #888888;
-  min-width: 23vw;
-  max-width: 23vw;
+  margin-bottom: 5%;
+  font-size: 0.9vw;
 }
 
 .projectCube:hover {
   background-color: lightslategray;
+  transition: all 0.3s ease-in;
 }
 
 .port {
@@ -116,16 +118,6 @@
     padding-left: 2vw;
     padding-right: 0;
   }
-  .projectCube {
-    min-width: 85vw;
-    height: 50vh;
-  }
-  .projectCube img {
-    max-height: 65%;
-  }
-  .port {
-    padding-bottom: 5vh;
-  }
   .skillTab {
     width: 25vw;
   }
@@ -133,6 +125,9 @@
     display: block;
     width: 100%;
     background-color: red;
+  }
+  .projectCube {
+    font-size: 3vw;
   }
 }
 
