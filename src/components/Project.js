@@ -21,7 +21,7 @@ const Project = (props) => {
         </Col>
       </Row>
       <Row className="justify-content-center pt-4">
-        <Col>
+        <Col className="pb-1">
           <Image className="d-block w-100" src={pic} alt="Project Picture" />
           <br></br>
           <a
