@@ -17,7 +17,7 @@ const Skills = () => {
       <Row className="m-0">
         <Container style={{ padding: "32px" }}>
           <Col>
-            <Row className="justify-content-center m-0">
+            <Row className="justify-content-center pb-4">
               <Figure className="skillTab">
                 <Figure.Image src={jsicon} width={68} alt="js" />
                 <Figure.Caption>JavaScript</Figure.Caption>
@@ -31,7 +31,7 @@ const Skills = () => {
                 <Figure.Caption>React</Figure.Caption>
               </Figure>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center pb-4">
               <Figure className="skillTab">
                 <Figure.Image src={cssicon} width={68} alt="css3" />
                 <Figure.Caption>CSS3</Figure.Caption>

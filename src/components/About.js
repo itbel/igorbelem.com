@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col} from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -7,7 +7,10 @@ const About = () => {
       <h1 className="display-4">About</h1>
       <Row>
         <Col>
-          <p className="aboutPara" style={{fontSize:"1.6rem"}}>
+          <p
+            className="aboutPara"
+            style={{ fontSize: "1.6rem", paddingTop: "16px" }}
+          >
             I am an aspiring web development college graduate seeking to provide
             services to your company as well as to improve my skills. I have a
             good background in computer systems, and I have been working with
