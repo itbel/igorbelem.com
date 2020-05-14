@@ -31,7 +31,7 @@ const Home = () => {
             <img className="contactTab" alt="linkedinIcon" src={linkedinlogo} />
           </a>
           <a
-            href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view?usp=sharing"
+            href="https://docs.google.com/document/d/1Yeg_P6NTCpHSk3jo9o0cuLe7PzTUgDUV44DpseqxFTA/edit?usp=sharing"
             aria-label="Resume"
             target="_blank"
             rel="noopener noreferrer"
