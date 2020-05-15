@@ -45,7 +45,7 @@ const Skills = () => {
                 <Figure.Caption>HTML5</Figure.Caption>
               </Figure>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center pb-4">
               <Figure className="skillTab">
                 <Figure.Image src={expressjs} width={68} alt="express" />
                 <Figure.Caption>Express</Figure.Caption>
