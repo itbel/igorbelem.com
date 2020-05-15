@@ -25,9 +25,15 @@ const Project = (props) => {
       </Row>
       <Row className="justify-content-center pt-4">
         <Col className="pb-1">
-          <Image className="d-block w-100" src={pic} alt="Project Picture" />
+          <a target="_blank" href={pic} rel="noopener noreferrer">
+            <Image
+              className="d-block w-100 p-2"
+              src={pic}
+              alt="Project Picture"
+            />
+          </a>
           <br></br>
-          <b>{description}</b>
+          <b style={{ padding: "16px" }}>{description}</b>
           <a
             target="_blank"
             rel="noopener noreferrer"
