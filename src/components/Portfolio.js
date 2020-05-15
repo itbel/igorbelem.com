@@ -2,7 +2,7 @@ import React from "react";
 import Project from "./Project";
 import { Row, Col } from "react-bootstrap";
 import chatapp from "./media/chatApp.png";
-import swapi from "./media/swapi3.png";
+import ims from "./media/inventory_list.png";
 import portfolio from "./media/portfolio1.png";
 
 const Portfolio = () => {
@@ -15,16 +15,20 @@ const Portfolio = () => {
       >
         <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
-            name={"swapiFetcher"}
-            description={"React, Node/Express App for data fetching from SWAPI"}
-            repo={"https://github.com/itbel/swapiFetcher"}
-            pic={swapi}
+            name={"IMS"}
+            description={
+              "An inventory management system made using the MERN Stack"
+            }
+            repo={"https://github.com/itbel/capstone-abc-store"}
+            pic={ims}
           ></Project>
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
             name={"ReactChatApplication"}
-            description={"Chat Application with MERN Stack and Socket.IO"}
+            description={
+              "A chat application made using the MERN stack and Socket.IO"
+            }
             repo={"https://github.com/itbel/ReactChatApplication"}
             pic={chatapp}
           ></Project>
@@ -32,7 +36,9 @@ const Portfolio = () => {
         <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
             name={"igorbelem.com"}
-            description={"React based portfolio"}
+            description={
+              "A personal portfolio website made using React, React-Bootstrap and PHP"
+            }
             repo={"https://github.com/itbel/portfolio"}
             pic={portfolio}
           ></Project>

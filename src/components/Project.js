@@ -15,20 +15,24 @@ const Project = (props) => {
   return (
     <div className="projectCube">
       <Row>
-        <Col>
+        <Col
+          style={{
+            paddingTop: "16px",
+          }}
+        >
           <h3>{name}</h3>
-          {description}
         </Col>
       </Row>
       <Row className="justify-content-center pt-4">
         <Col className="pb-1">
           <Image className="d-block w-100" src={pic} alt="Project Picture" />
           <br></br>
+          <b>{description}</b>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href={repo}
-            className="btn btn-dark"
+            className="btn btn-dark d-block m-3"
           >
             View Code
           </a>
