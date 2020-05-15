@@ -17,13 +17,13 @@ const Project = (props) => {
       <Row>
         <Col
           style={{
-            paddingTop: "16px",
+            paddingTop: "8px",
           }}
         >
           <h3>{name}</h3>
         </Col>
       </Row>
-      <Row className="justify-content-center pt-4">
+      <Row className="justify-content-center pt-2">
         <Col className="pb-1">
           <a target="_blank" href={pic} rel="noopener noreferrer">
             <Image
@@ -33,7 +33,7 @@ const Project = (props) => {
             />
           </a>
           <br></br>
-          <b style={{ padding: "16px" }}>{description}</b>
+          <b style={{ paddingTop: "16px" }}>{description}</b>
           <a
             target="_blank"
             rel="noopener noreferrer"
