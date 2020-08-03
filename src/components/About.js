@@ -13,9 +13,8 @@ const About = () => {
           >
             I am an aspiring web development college graduate seeking to provide
             services to your company as well as to improve my skills. I have a
-            good background in computer systems, and I have been working with
-            the MERN stack. I always strive to learn new and emerging
-            technologies.
+            good background in computer systems, and I specialize in the MERN
+            stack. I always strive to learn new and emerging technologies.
           </p>
         </Col>
       </Row>

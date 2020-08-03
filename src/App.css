@@ -58,8 +58,8 @@
 /* SKILLS */
 .skills {
   font-weight: bold;
-  padding-top: 50px;
-  min-height: 50vh;
+  padding-top: 60px;
+  min-height: 40vh;
   color: black;
   background-color: #dfdfdf;
 }
@@ -84,6 +84,7 @@
   box-shadow: 1px 1px 1px 1px #888888;
   margin-bottom: 5%;
   font-size: 0.9vw;
+  padding: 2px;
 }
 
 .projectCube:hover {
@@ -128,10 +129,10 @@
     background-color: red;
   }
   .projectCube {
-    font-size: 3vw;
+    font-size: 1rem;
+    padding: 2px;
   }
 }
-
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   background-color: lightgrey;

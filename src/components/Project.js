@@ -5,33 +5,55 @@ const Project = (props) => {
   const [description, setDescription] = useState();
   const [repo, setRepo] = useState();
   const [pic, setPic] = useState();
+  const [demo, setDemo] = useState();
 
   useEffect(() => {
     setName(props.name);
     setDescription(props.description);
     setRepo(props.repo);
     setPic(props.pic);
-  }, [props.name, props.description, props.repo, props.pic]);
+    setDemo(props.demo);
+  }, [props.name, props.description, props.repo, props.pic, props.demo]);
   return (
     <div className="projectCube">
       <Row>
-        <Col>
+        <Col
+          style={{
+            paddingTop: "8px",
+          }}
+        >
           <h3>{name}</h3>
-          {description}
         </Col>
       </Row>
-      <Row className="justify-content-center pt-4">
+      <Row className="justify-content-center pt-2">
         <Col className="pb-1">
-          <Image className="d-block w-100" src={pic} alt="Project Picture" />
+          <a target="_blank" href={pic} rel="noopener noreferrer">
+            <Image
+              className="d-block w-100 p-2"
+              src={pic}
+              alt="Project Picture"
+            />
+          </a>
           <br></br>
+          <b style={{ paddingTop: "16px" }}>{description}</b>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href={repo}
-            className="btn btn-dark"
+            className="btn btn-dark d-block m-3"
           >
             View Code
           </a>
+          {demo !== undefined ? (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={demo}
+              className="btn btn-dark d-block m-3"
+            >
+              View Demo
+            </a>
+          ) : null}
         </Col>
       </Row>
     </div>

@@ -3,7 +3,6 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 import githublogo from "./media/github.svg";
 import linkedinlogo from "./media/LIblack.svg";
-import cv from "./media/cv.svg";
 
 const Home = () => {
   return (
@@ -29,14 +28,6 @@ const Home = () => {
             rel="noopener noreferrer"
           >
             <img className="contactTab" alt="linkedinIcon" src={linkedinlogo} />
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1GQ7bxuYuk4mRPsXN4QHqbUythiuSu5bT/view?usp=sharing"
-            aria-label="Resume"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="contactTab" alt="cvIcon" src={cv} />
           </a>
         </div>
       </Jumbotron>
