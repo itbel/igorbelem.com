@@ -3,7 +3,6 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 import githublogo from "./media/github.svg";
 import linkedinlogo from "./media/LIblack.svg";
-//import cv from "./media/cv.svg";
 
 const Home = () => {
   return (

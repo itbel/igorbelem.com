@@ -5,13 +5,15 @@ const Project = (props) => {
   const [description, setDescription] = useState();
   const [repo, setRepo] = useState();
   const [pic, setPic] = useState();
+  const [demo, setDemo] = useState();
 
   useEffect(() => {
     setName(props.name);
     setDescription(props.description);
     setRepo(props.repo);
     setPic(props.pic);
-  }, [props.name, props.description, props.repo, props.pic]);
+    setDemo(props.demo);
+  }, [props.name, props.description, props.repo, props.pic, props.demo]);
   return (
     <div className="projectCube">
       <Row>
@@ -42,6 +44,16 @@ const Project = (props) => {
           >
             View Code
           </a>
+          {demo !== undefined ? (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={demo}
+              className="btn btn-dark d-block m-3"
+            >
+              View Demo
+            </a>
+          ) : null}
         </Col>
       </Row>
     </div>
