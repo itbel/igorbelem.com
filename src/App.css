@@ -50,8 +50,8 @@
 .aboutPara {
   margin-left: 3vw;
   text-align: left;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-left: 28vw;
+  padding-right: 28vw;
   color: lightgray;
 }
 
@@ -64,15 +64,17 @@
   background-color: #dfdfdf;
 }
 .skillTab {
-  width: 7vw;
-  margin: auto;
-  min-width: 7vw;
+  width: 4vw;
+  margin-left: 48px;
+  margin-right: 48px;
+  min-width: 4vw;
   display: inline-block;
   border-radius: 8px 8px 8px 8px;
+  transition: all 0.1s ease-in;
 }
 .skillTab:hover {
   background-color: lightslategray;
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease-in;
 }
 
 /* PORTFOLIO */
@@ -85,11 +87,12 @@
   margin-bottom: 5%;
   font-size: 0.9vw;
   padding: 2px;
+  transition: all 0.1s ease-in;
 }
 
 .projectCube:hover {
   background-color: lightslategray;
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .port {
@@ -122,6 +125,7 @@
   }
   .skillTab {
     width: 25vw;
+    margin: 0;
   }
   .formCol {
     display: block;
