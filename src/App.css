@@ -69,10 +69,11 @@
   min-width: 7vw;
   display: inline-block;
   border-radius: 8px 8px 8px 8px;
+  transition: all 0.1s ease-in;
 }
 .skillTab:hover {
   background-color: lightslategray;
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease-in;
 }
 
 /* PORTFOLIO */
@@ -85,11 +86,12 @@
   margin-bottom: 5%;
   font-size: 0.9vw;
   padding: 2px;
+  transition: all 0.1s ease-in;
 }
 
 .projectCube:hover {
   background-color: lightslategray;
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .port {
