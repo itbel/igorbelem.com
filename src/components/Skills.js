@@ -8,7 +8,12 @@ import reacticon from "./media/react.svg";
 import mongodbicon from "./media/mongodb.svg";
 import expressjs from "./media/expressjs.svg";
 import html5 from "./media/html5.svg";
-import php from "./media/php.svg";
+import amplify from "./media/amplify.svg";
+import sass from "./media/sass.svg";
+import graphql from "./media/graphql.svg";
+import jest from "./media/jest.svg"
+import materialui from "./media/materialui.svg"
+import typescript from "./media/typescript.svg"
 const Skills = () => {
   return (
     <div className="skills justify-content-center">
@@ -19,46 +24,75 @@ const Skills = () => {
           <Col>
             <Row className="justify-content-center pb-4">
               <Figure className="skillTab">
-                <Figure.Image src={jsicon} width={68} alt="js" />
+                <Figure.Image src={jsicon} width={68} alt="JavaScript Icon" />
                 <Figure.Caption>JavaScript</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={nodeicon} width={68} alt="node" />
-                <Figure.Caption>Node</Figure.Caption>
+                <Figure.Image src={reacticon} width={68} alt="React Icon" />
+                <Figure.Caption>React</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={reacticon} width={68} alt="react" />
-                <Figure.Caption>React</Figure.Caption>
+                <Figure.Image src={reacticon} width={68} alt="React Native Icon" />
+                <Figure.Caption>React Native</Figure.Caption>
+              </Figure>
+            </Row>
+            <Row className="justify-content-center pb-4">
+            <Figure className="skillTab">
+                <Figure.Image src={typescript} width={68} alt="TypeScript Icon" />
+                <Figure.Caption>TypeScript</Figure.Caption>
+              </Figure>
+            <Figure className="skillTab">
+                <Figure.Image src={amplify} width={68} alt="Amplify Icon" />
+                <Figure.Caption>Amplify</Figure.Caption>
+              </Figure>
+              <Figure className="skillTab">
+                <Figure.Image src={nodeicon} width={68} alt="Node Icon" />
+                <Figure.Caption>Node</Figure.Caption>
               </Figure>
             </Row>
             <Row className="justify-content-center pb-4">
               <Figure className="skillTab">
-                <Figure.Image src={cssicon} width={68} alt="css3" />
+                <Figure.Image src={expressjs} width={68} alt="ExpressJS Icon" />
+                <Figure.Caption>Express</Figure.Caption>
+              </Figure>
+              <Figure className="skillTab">
+                <Figure.Image src={mongodbicon} width={68} alt="MongoDB Icon" />
+                <Figure.Caption>MongoDB</Figure.Caption>
+              </Figure>
+              <Figure className="skillTab">
+                <Figure.Image src={graphql} width={68} alt="GraphQL Icon" />
+                <Figure.Caption>GraphQL</Figure.Caption>
+              </Figure>
+            </Row>
+            <Row className="justify-content-center pb-4">
+              <Figure className="skillTab">
+                <Figure.Image src={cssicon} width={68} alt="CSS3 Icon" />
                 <Figure.Caption>CSS3</Figure.Caption>
               </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src={bootstricon} width={68} alt="bootstrap" />
-                <Figure.Caption>Bootstrap</Figure.Caption>
+              <Figure aria-label="Sass Icon" className="skillTab">
+                <Figure.Image src={sass} width={68} alt="Sass Icon" />
+                <Figure.Caption>Sass</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={html5} width={68} alt="html5" />
+                <Figure.Image src={html5} width={68} alt="HTMl5 Icon" />
                 <Figure.Caption>HTML5</Figure.Caption>
               </Figure>
             </Row>
             <Row className="justify-content-center pb-4">
-              <Figure className="skillTab">
-                <Figure.Image src={expressjs} width={68} alt="express" />
-                <Figure.Caption>Express</Figure.Caption>
+            <Figure className="skillTab">
+                <Figure.Image src={jest} width={68} alt="Jest Icon" />
+                <Figure.Caption>Jest</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={mongodbicon} width={68} alt="mongodb" />
-                <Figure.Caption>MongoDB</Figure.Caption>
+                <Figure.Image src={bootstricon} width={68} alt="Bootstrap Icon" />
+                <Figure.Caption>Bootstrap</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
-                <Figure.Image src={php} width={68} alt="php" />
-                <Figure.Caption>PHP</Figure.Caption>
+                <Figure.Image src={materialui} width={68} alt="MaterialUI Icon" />
+                <Figure.Caption>Material UI</Figure.Caption>
               </Figure>
             </Row>
+
           </Col>
         </Container>
       </Row>

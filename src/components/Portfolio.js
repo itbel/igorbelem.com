@@ -3,8 +3,8 @@ import Project from "./Project";
 import { Row, Col } from "react-bootstrap";
 import chatapp from "./media/chatApp.png";
 import ims from "./media/inventory_list.png";
-import portfolio from "./media/portfolio1.png";
 import footguess from "./media/footGuess.png";
+import bolaoapp from "./media/bolaoapp.jpg"
 const Portfolio = () => {
   return (
     <div className="port">
@@ -36,13 +36,12 @@ const Portfolio = () => {
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
           <Project
-            demo={"https://igorbelem.com"}
-            name={"igorbelem.com"}
+            name={"Bolao APP"}
             description={
-              "A portfolio website made using React, React-Bootstrap and PHP"
+              "A Soccer tournament result guessing application built with React Native. This shares a backend with footGuess."
             }
-            repo={"https://github.com/itbel/portfolio"}
-            pic={portfolio}
+            repo={"https://github.com/itbel/bolao"}
+            pic={bolaoapp}
           ></Project>
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
