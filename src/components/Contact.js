@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Col, Row } from "react-bootstrap";
 import axios from "axios";
+require('dotenv').config()
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ const Contact = () => {
   const [mailSent, setMailSent] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (name.length > 0 && email.length > 0 && message.length > 0) {
       if (message.length > 10) {
@@ -21,23 +22,28 @@ const Contact = () => {
             mailSent: mailSent,
             error: error,
           };
-          axios({
-            method: "post",
-            url: `${"/api/index.php"}`,
-            headers: { "content-type": "application/json" },
-            data: emailData,
-          })
-            .then((result) => {
-              setMailSent(result.data.sent);
-              alert("Email sent successfully!");
+          try{
+            console.log(process.env.REACT_APP_url)
+            const response = await axios({
+              method: 'post',
+              url: process.env.REACT_APP_url,
+              data: {
+                body: emailData.message,
+                email: emailData.email
+              },
+              headers:{
+                "x-api-key" : process.env.REACT_APP_API_key,
+                'Content-Type': 'application/json'
+              }
             })
-            .catch((error) => {
-              setError(error.message);
-              alert("Unable to sent message.");
-            });
-          setName("");
-          setEmail("");
-          setMessage("");
+            console.log(response)
+            setName("");
+            setEmail("");
+            setMessage("");
+          }catch(err){
+            console.log(err)
+            alert("An error occured. Please try again later, or contact through e-mail")
+          }
         } else {
           alert("Message must not exceed 10,000 characters");
         }
