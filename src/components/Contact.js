@@ -24,6 +24,7 @@ const Contact = () => {
           };
           try{
             console.log(process.env.REACT_APP_url)
+            console.log(process.env.REACT_APP_API_key)
             const response = await axios({
               method: 'post',
               url: process.env.REACT_APP_url,
@@ -33,7 +34,8 @@ const Contact = () => {
               },
               headers:{
                 "x-api-key" : process.env.REACT_APP_API_key,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
               }
             })
             console.log(response)
