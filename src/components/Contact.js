@@ -4,6 +4,7 @@ import axios from "axios";
 require('dotenv').config()
 
 const Contact = () => {
+  console.log(process.env)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
