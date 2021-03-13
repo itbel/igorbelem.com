@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Col, Row } from "react-bootstrap";
 import axios from "axios";
-require('dotenv').config()
 
 const Contact = () => {
-  console.log(process.env)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -24,22 +22,19 @@ const Contact = () => {
             error: error,
           };
           try{
-            console.log(process.env.REACT_APP_CONTACT_URI)
-            console.log(process.env.REACT_APP_API_KEY)
             const response = await axios({
               method: 'post',
-              url: process.env.REACT_APP_CONTACT_URI,
+              url: `https://da71n4j148.execute-api.us-east-1.amazonaws.com/prod/`,
               data: {
                 body: emailData.message,
                 email: emailData.email
               },
               headers:{
-                "x-api-key" : process.env.REACT_APP_API_KEY,
+                "x-api-key" : "Dc1a8uYMjr3mWE1i2nw484qaIn73AvC88qtAczAP",
                 'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "https://master.d3rdt27ioun0jd.amplifyapp.com/"
               }
             })
-            console.log(response)
+            alert("Message was sent successfully")
             setName("");
             setEmail("");
             setMessage("");
