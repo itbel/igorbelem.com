@@ -24,10 +24,10 @@ const Contact = () => {
           try{
             const response = await axios({
               method: 'post',
-              url: `https://da71n4j148.execute-api.us-east-1.amazonaws.com/prod/`,
+              url: `https://da71n4j148.execute-api.us-east-1.amazonaws.com/prod`,
               data: {
-                body: JSON.stringify(emailData.message),
-                email: JSON.stringify(emailData.email)
+                body: emailData.message,
+                email: emailData.email
               },
               headers:{
                 "x-api-key" : "Dc1a8uYMjr3mWE1i2nw484qaIn73AvC88qtAczAP",
