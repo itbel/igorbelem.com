@@ -23,17 +23,17 @@ const Contact = () => {
             error: error,
           };
           try{
-            console.log(REACT_APP_CONTACT_URI)
-            console.log(REACT_APP_API_KEY)
+            console.log(process.env.REACT_APP_CONTACT_URI)
+            console.log(process.env.REACT_APP_API_KEY)
             const response = await axios({
               method: 'post',
-              url: REACT_APP_CONTACT_URI,
+              url: process.env.REACT_APP_CONTACT_URI,
               data: {
                 body: emailData.message,
                 email: emailData.email
               },
               headers:{
-                "x-api-key" : REACT_APP_API_KEY,
+                "x-api-key" : process.env.REACT_APP_API_KEY,
                 'Content-Type': 'application/json',
                 "Access-Control-Allow-Origin": "https://master.d3rdt27ioun0jd.amplifyapp.com/"
               }
