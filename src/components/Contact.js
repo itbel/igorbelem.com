@@ -23,17 +23,17 @@ const Contact = () => {
             error: error,
           };
           try{
-            console.log(process.env.REACT_APP_url)
-            console.log(process.env.REACT_APP_API_key)
+            console.log(process.env.REACT_APP_CONTACT_URI)
+            console.log(process.env.REACT_APP_API_KEY)
             const response = await axios({
               method: 'post',
-              url: process.env.REACT_APP_url,
+              url: process.env.REACT_APP_CONTACT_URI,
               data: {
                 body: emailData.message,
                 email: emailData.email
               },
               headers:{
-                "x-api-key" : process.env.REACT_APP_API_key,
+                "x-api-key" : process.env.REACT_APP_API_KEY,
                 'Content-Type': 'application/json',
                 "Access-Control-Allow-Origin": "*"
               }
