@@ -26,14 +26,15 @@ const Contact = () => {
               method: 'post',
               url: `https://da71n4j148.execute-api.us-east-1.amazonaws.com/prod/`,
               data: {
-                body: emailData.message,
-                email: emailData.email
+                body: JSON.stringify(emailData.message),
+                email: JSON.stringify(emailData.email)
               },
               headers:{
                 "x-api-key" : "Dc1a8uYMjr3mWE1i2nw484qaIn73AvC88qtAczAP",
                 'Content-Type': 'application/json',
               }
             })
+            console.log(response)
             alert("Message was sent successfully")
             setName("");
             setEmail("");
