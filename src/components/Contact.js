@@ -35,7 +35,7 @@ const Contact = () => {
               headers:{
                 "x-api-key" : process.env.REACT_APP_API_KEY,
                 'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "*"
+                "Access-Control-Allow-Origin": "https://master.d3rdt27ioun0jd.amplifyapp.com/"
               }
             })
             console.log(response)
