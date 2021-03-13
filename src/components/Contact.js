@@ -30,7 +30,7 @@ const Contact = () => {
                 email: emailData.email
               },
               headers:{
-                "x-api-key" : "Dc1a8uYMjr3mWE1i2nw484qaIn73AvC88qtAczAP",
+                "x-api-key" : "5a1d1GCP5J8XSVZksGU3r5p8Ym7wbKw92RaM58cJ",
                 'Content-Type': 'application/json',
               }
             })
