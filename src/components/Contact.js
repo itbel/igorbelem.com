@@ -24,7 +24,7 @@ const Contact = () => {
           try{
             const response = await axios({
               method: 'post',
-              url: `https://da71n4j148.execute-api.us-east-1.amazonaws.com/prod`,
+              url: `https://rmecygly8i.execute-api.us-east-1.amazonaws.com/prod`,
               data: {
                 body: emailData.message,
                 email: emailData.email
