@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Col, Row } from "react-bootstrap";
-import axios from "axios";
+import Axios from "axios";
+import Spinner from "./Spinner";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -8,6 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [mailSent, setMailSent] = useState(false);
   const [error, setError] = useState(null);
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,8 +23,14 @@ const Contact = () => {
             mailSent: mailSent,
             error: error,
           };
+          // MAKE THIS WORK WITH FETCH
+          let content = {
+            body: emailData.message,
+            email: emailData.email
+          }
           try{
-            const response = await axios({
+            setIsSending(true)
+            const response = await Axios({
               method: 'post',
               url: `https://rmecygly8i.execute-api.us-east-1.amazonaws.com/prod`,
               data: {
@@ -35,12 +43,14 @@ const Contact = () => {
               }
             })
             console.log(response)
+            setIsSending(false)
             alert("Message was sent successfully")
             setName("");
             setEmail("");
             setMessage("");
           }catch(err){
             console.log(err)
+            setIsSending(false)
             alert("An error occured. Please try again later, or contact through e-mail")
           }
         } else {
@@ -98,8 +108,10 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>
-              <Button type="submit" variant="dark" style={{ width: "100%" }}>
-                Submit Message
+                
+           
+              <Button type="submit" variant="dark" style={{width:"100%"}}>
+                {isSending ? <Spinner/> : "Submit"}
               </Button>
             </Form>
           </Col>
