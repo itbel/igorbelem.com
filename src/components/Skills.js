@@ -71,7 +71,7 @@ const Skills = () => {
               </Figure>
               <Figure aria-label="Sass Icon" className="skillTab">
                 <Figure.Image src={sass} width={68} alt="Sass Icon" />
-                <Figure.Caption>Sass</Figure.Caption>
+                <Figure.Caption>SCSS</Figure.Caption>
               </Figure>
               <Figure className="skillTab">
                 <Figure.Image src={html5} width={68} alt="HTMl5 Icon" />

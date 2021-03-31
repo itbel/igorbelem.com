@@ -1,19 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Image, Row, Col } from "react-bootstrap";
-const Project = (props) => {
-  const [name, setName] = useState();
-  const [description, setDescription] = useState();
-  const [repo, setRepo] = useState();
-  const [pic, setPic] = useState();
-  const [demo, setDemo] = useState();
-
-  useEffect(() => {
-    setName(props.name);
-    setDescription(props.description);
-    setRepo(props.repo);
-    setPic(props.pic);
-    setDemo(props.demo);
-  }, [props.name, props.description, props.repo, props.pic, props.demo]);
+const Project = ({name, description, repo, pic, demo}) => {
   return (
     <div className="projectCube">
       <Row>
