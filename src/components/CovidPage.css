@@ -6,7 +6,7 @@
     overflow-x:auto;
   }
   ::-webkit-scrollbar {
-    height: 0.5em
+    height: 0.2em;
   }
   .pageHeader {
     margin-top:16px;
