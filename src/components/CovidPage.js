@@ -54,14 +54,12 @@ const CovidPage = () => {
 
   return (
     <div>
-      <div style={{ overflowY: "auto", overflowX: "hidden" }}>
+      <div style={{ overflowY: "auto", overflowX: "auto"}}>
+      <h1 className="pageHeader" colSpan={4}>
+                Ontario - Last 7 Days
+              </h1>
         <table cellSpacing={0} className="tableTheme">
           <thead>
-            <tr>
-              <th className="tableHeader" colSpan={4}>
-                Ontario - Last 7 Days
-              </th>
-            </tr>
             <tr>
               {headerData &&
                 headerData.map((header) => {
