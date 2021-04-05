@@ -7,8 +7,6 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [mailSent, setMailSent] = useState(false);
-  const [error, setError] = useState(null);
   const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -20,38 +18,32 @@ const Contact = () => {
             name: name,
             email: email,
             message: message,
-            mailSent: mailSent,
-            error: error,
           };
-          // MAKE THIS WORK WITH FETCH
-          let content = {
-            body: emailData.message,
-            email: emailData.email
-          }
           try{
             setIsSending(true)
             const response = await Axios({
               method: 'post',
-              url: `https://rmecygly8i.execute-api.us-east-1.amazonaws.com/prod`,
+              url: `https://33qka4mlhl.execute-api.us-east-1.amazonaws.com/prod/contact`,
               data: {
                 body: emailData.message,
                 email: emailData.email
               },
               headers:{
-                "x-api-key" : "5a1d1GCP5J8XSVZksGU3r5p8Ym7wbKw92RaM58cJ",
+                "x-api-key" : "5DCuVm7b9AZDGeOyak2k7pGBSe3ZnEk2b3v27cf0",
                 'Content-Type': 'application/json',
               }
             })
             console.log(response)
-            setIsSending(false)
             alert("Message was sent successfully")
             setName("");
             setEmail("");
             setMessage("");
           }catch(err){
-            console.log(err)
+            console.error(err)
             setIsSending(false)
             alert("An error occured. Please try again later, or contact through e-mail")
+          } finally{
+            setIsSending(false)
           }
         } else {
           alert("Message must not exceed 10,000 characters");
@@ -108,10 +100,8 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>
-                
-           
-              <Button type="submit" variant="dark" style={{width:"100%"}}>
-                {isSending ? <Spinner/> : "Submit"}
+              <Button type="submit" variant="dark" style={{width:"100%", minHeight:38}}>
+                {isSending ? <div><Spinner/></div> : "Submit"}
               </Button>
             </Form>
           </Col>

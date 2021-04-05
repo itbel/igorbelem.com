@@ -1,89 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
-import Home from "./components/Home";
-import Navigation from "./components/Navigation";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import MainPage from "./components/MainPage"
+import CovidPage from "./components/CovidPage"
 function App() {
-  const homeRef = useRef();
-  const aboutRef = useRef();
-  const portRef = useRef();
-  const contactRef = useRef();
-  const [selection, setSelection] = useState("home");
-  /* REDUNDANT CODE REVIEW REQUIRED*/
-  const handleSelect = (select) => {
-    setSelection(select);
-    console.log(`received ${selection} in app.js`);
-    if (selection === "home") {
-      homeRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "about") {
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "portfolio") {
-      portRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "contact") {
-      contactRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-  useEffect(() => {
-    if (selection === "home") {
-      homeRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "about") {
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "portfolio") {
-      portRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    if (selection === "contact") {
-      contactRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [selection, setSelection]);
   return (
-    <div className="allShared">
-      <Navigation className="nav" onNavSelection={handleSelect}></Navigation>
-      <div ref={homeRef}>
-        <Home></Home>
-      </div>
-      <div ref={aboutRef}>
-        <About></About>
-        <Skills></Skills>
-      </div>
-      <div ref={portRef}>
-        <Portfolio></Portfolio>
-      </div>
-      <div ref={contactRef}>
-        <Contact></Contact>
-      </div>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MainPage}/>
+          <Route path="/covid" component={CovidPage}/>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const Navigation = (props) => {
   const sendData = (key) => {
     props.onNavSelection(key);
@@ -30,6 +30,7 @@ const Navigation = (props) => {
           <Nav.Link eventKey="about">About</Nav.Link>
           <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
           <Nav.Link eventKey="contact">Contact</Nav.Link>
+          <Nav.Item><Link className="nav-link" to="/covid">Covid</Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
