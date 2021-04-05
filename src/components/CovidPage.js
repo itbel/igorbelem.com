@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CovidPage.css";
+import Spinner from "./Spinner";
 
 const CovidPage = () => {
   const [headerData, setHeaderData] = useState([]);
@@ -8,7 +9,7 @@ const CovidPage = () => {
     const loadData = async () => {
       try {
         const response = await fetch(
-         "https://33qka4mlhl.execute-api.us-east-1.amazonaws.com/prod/covid",
+          "https://33qka4mlhl.execute-api.us-east-1.amazonaws.com/prod/covid",
           {
             method: "get",
             mode: "cors",
@@ -54,10 +55,10 @@ const CovidPage = () => {
 
   return (
     <div>
-      <div style={{ overflowY: "auto", overflowX: "auto"}}>
-      <h1 className="pageHeader" colSpan={4}>
-                Ontario - Last 7 Days
-              </h1>
+      <div style={{ overflowY: "auto", overflowX: "auto" }}>
+        <h1 className="pageHeader" colSpan={4}>
+          Ontario - Last 7 Days
+        </h1>
         <table cellSpacing={0} className="tableTheme">
           <thead>
             <tr>
@@ -72,30 +73,16 @@ const CovidPage = () => {
             </tr>
           </thead>
           <tbody>
-            {fieldData.length ? (
+            {fieldData.length ?
               fieldData.map((field, index) => {
                 return <Row key={index} field={field} index={index} />;
-              })
-            ) : (
-              <tr style={{ backgroundColor: "#F5F5F5" }} className="tableRow">
-                <td
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: 8,
-                    marginTop: 8,
-                  }}
-                  colSpan={4}
-                >
-                  <div className="spinner" />
-                </td>
-              </tr>
-            )}
+              }) : null}
           </tbody>
         </table>
+        {fieldData.length ? null:  <Spinner/>}
       </div>
     </div>
   );
-}
+};
 
 export default CovidPage;
