@@ -57,7 +57,7 @@ const CovidPage = () => {
     <div>
       <div style={{ overflowY: "auto", overflowX: "auto" }}>
         <h1 className="pageHeader" colSpan={4}>
-          Ontario - Last 7 Days
+          Ontario - Vaccinations
         </h1>
         <table cellSpacing={0} className="tableTheme">
           <thead>
