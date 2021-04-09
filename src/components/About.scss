@@ -1,0 +1,23 @@
+@use "./Theme.scss";
+
+/* ABOUT */
+.about_container {
+    p {
+        font-size:18px;
+        align-self: center;
+        width:clamp(20%, 350px, 100%);
+        padding:16px;
+        text-align:justify;
+    }
+    display:flex;
+    flex:1;
+    font-size:22px;
+    padding-top:50px;
+
+    padding-bottom:50px;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-height: 30vh;
+    background-color: #b2b2b2;
+    color: black;
+}
