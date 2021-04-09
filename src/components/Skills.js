@@ -1,5 +1,4 @@
 import React from "react";
-import { Figure, Container } from "react-bootstrap";
 import "./Skills.scss";
 
 const Technologies = () => {
