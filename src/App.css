@@ -4,7 +4,7 @@
 
 /* NAV */
 .nav {
-  font-size: 1.1rem;
+  font-size: 18px;
   font-family: "Lato", sans-serif;
   background-color: #404040;
   padding: 2px;
@@ -19,7 +19,6 @@
 .home {
   min-height: 100vh;
   padding-top: 60px;
-  background-image: url("./components/media/coding.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -40,11 +39,12 @@
   padding-top: 60px;
   min-height: 40vh;
   background-color: #b2b2b2;
-  color: #333333;
+  color: black
 }
 .about p {
   font-family: "Lato", sans-serif;
-  color: #333333;
+  letter-spacing:2px;
+  color: black;
 }
 
 .aboutPara {

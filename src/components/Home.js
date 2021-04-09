@@ -1,37 +1,35 @@
 import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import "./Home.scss";
 
-import githublogo from "./media/github.svg";
-import linkedinlogo from "./media/LIblack.svg";
+const Banner = ({ name, position, github, linkedin, location }) => {
+  return (
+    <article className="banner">
+      <h1 className="header">{name}</h1>
+      <h4 style={{margin:4}}>{position}</h4>
+      <h6>{location}</h6>
+      <section className="links_container">
+        <a aria-label="Visit my GitHub profile" href={github}>
+          <img aria-label="GitHub Link" width={50} src="/assets/github.svg" alt="GitHub Icon"></img>
+        </a>
+        <a aria-label="Visit my Linkedin profile" href={linkedin}>
+          <img width={50} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
+        </a>
+      </section>
+    </article>
+  );
+};
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="spacer"></div>
-      <Jumbotron className="jumbo pt-3 pb-3">
-        <h1 className="font-weight-bold">Igor Belem</h1>
-        <h2>Full-Stack Developer</h2>
-        <h6>Toronto, ON, Canada</h6>
-        <div className="justify-content-center" style={{ color: "black" }}>
-          <a
-            href="https://github.com/itbel"
-            aria-label="Github"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="contactTab" alt="githubIcon" src={githublogo} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/igor-belem"
-            aria-label="Linked In"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="contactTab" alt="linkedinIcon" src={linkedinlogo} />
-          </a>
-        </div>
-      </Jumbotron>
-    </div>
+    <section className="home_container">
+      <Banner
+        name="Igor Belem"
+        position="Full Stack Developer"
+        github="https://github.com/itbel"
+        linkedin="https://www.linkedin.com/in/igor-belem"
+        location="Toronto, ON, Canada"
+      />
+    </section>
   );
 };
 

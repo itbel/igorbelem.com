@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 const About = () => {
   return (
     <div className="about pl-5 pr-5 justify-content-center">
-      <h1 className="display-4">About</h1>
+      <h1>About</h1>
       <Row>
         <Col>
           <p

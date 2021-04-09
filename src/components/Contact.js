@@ -57,7 +57,7 @@ const Contact = () => {
   };
   return (
     <div className="contact pl-5 pr-5 pb-5 justify-content-center">
-      <h1 className="display-4">Contact</h1>
+      <h1>Contact</h1>
       <br></br>
       <h5>Feel free to contact me and I'll respond as soon as I can</h5>
       <br></br>
@@ -100,7 +100,7 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>
-              <Button type="submit" variant="dark" style={{width:"100%", minHeight:38}}>
+              <Button type="submit" variant="dark" style={{ width:"100%", minHeight:38 }}>
                 {isSending ? <div><Spinner/></div> : "Submit"}
               </Button>
             </Form>

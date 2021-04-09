@@ -1,14 +1,10 @@
 import React from "react";
 import Project from "./Project";
 import { Row, Col } from "react-bootstrap";
-import chatapp from "./media/chatApp.png";
-import ims from "./media/inventory_list.png";
-import footguess from "./media/footGuess.png";
-import bolaoapp from "./media/bolaoapp.jpg"
 const Portfolio = () => {
   return (
     <div className="port">
-      <h1 className="display-4">My Projects:</h1>
+      <h1>My Projects</h1>
       <Row
         className="justify-content-center"
         style={{ margin: "auto", paddingBottom: "5%" }}
@@ -20,7 +16,7 @@ const Portfolio = () => {
               "An inventory management system made using the MERN Stack"
             }
             repo={"https://github.com/itbel/capstone-abc-store"}
-            pic={ims}
+            pic={"/assets/inventory_list.png"}
           ></Project>
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
@@ -31,7 +27,7 @@ const Portfolio = () => {
               "A chat application made using the MERN stack and Socket.IO"
             }
             repo={"https://github.com/itbel/ReactChatApplication"}
-            pic={chatapp}
+            pic={"/assets/chatApp.png"}
           ></Project>
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
@@ -41,7 +37,7 @@ const Portfolio = () => {
               "A Soccer tournament result guessing application built with React Native. This shares a backend with footGuess."
             }
             repo={"https://github.com/itbel/bolao"}
-            pic={bolaoapp}
+            pic={"/assets/bolaoapp.jpg"}
           ></Project>
         </Col>
         <Col xs={11} sm={6} lg={4} xl={3}>
@@ -52,7 +48,7 @@ const Portfolio = () => {
               "Soccer Guessing Tournaments Application using MERN Stack"
             }
             repo={"https://github.com/itbel/footGuess"}
-            pic={footguess}
+            pic={"/assets/footGuess.png"}
           ></Project>
         </Col>
       </Row>
