@@ -1,0 +1,22 @@
+@use "./Theme.scss";
+
+.skills_container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom:50px;
+    color: black;
+    background-color: #dfdfdf;
+    .icon_grid{
+        margin-top:40px;
+        justify-content: center;
+        display:grid;
+        gap: 3vw;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+

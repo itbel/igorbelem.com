@@ -1,74 +1,88 @@
 import React from "react";
-import { Row, Col, Figure, Container } from "react-bootstrap";
-const Skills = () => {
-  return (
-    <div className="skills justify-content-center">
-      <h1>Skills</h1>
+import { Figure, Container } from "react-bootstrap";
+import "./Skills.scss";
 
-      <Row className="m-0">
-        <Container style={{ padding: "32px" }}>
-          <Col>
-            <Row className="justify-content-center pb-4">
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/js_badge.svg" width={68} alt="JavaScript Icon" />
-                <Figure.Caption>JavaScript</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/react.svg" width={68} alt="React Icon" />
-                <Figure.Caption>React</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-              <Figure.Image src="/assets/react.svg" width={68} alt="React Icon" />
-                <Figure.Caption>React Native</Figure.Caption>
-              </Figure>
-            </Row>
-            <Row className="justify-content-center pb-4">
-            <Figure className="skillTab">
-                <Figure.Image src="/assets/typescript.svg" width={68} alt="TypeScript Icon" />
-                <Figure.Caption>TypeScript</Figure.Caption>
-              </Figure>
-            <Figure className="skillTab">
-                <Figure.Image src="/assets/amplify.svg" width={68} alt="Amplify Icon" />
-                <Figure.Caption>Amplify</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/nodejs_small.svg" width={68} alt="Node Icon" />
-                <Figure.Caption>Node</Figure.Caption>
-              </Figure>
-            </Row>
-            <Row className="justify-content-center pb-4">
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/expressjs.svg" width={68} alt="ExpressJS Icon" />
-                <Figure.Caption>Express</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/mongodb.svg" width={68} alt="MongoDB Icon" />
-                <Figure.Caption>MongoDB</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/graphql.svg" width={68} alt="GraphQL Icon" />
-                <Figure.Caption>GraphQL</Figure.Caption>
-              </Figure>
-            </Row>
-            <Row className="justify-content-center pb-4">
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/css3.svg" width={68} alt="CSS3 Icon" />
-                <Figure.Caption>CSS3</Figure.Caption>
-              </Figure>
-              <Figure aria-label="Sass Icon" className="skillTab">
-                <Figure.Image src="/assets/sass.svg" width={68} alt="Sass Icon" />
-                <Figure.Caption>SCSS</Figure.Caption>
-              </Figure>
-              <Figure className="skillTab">
-                <Figure.Image src="/assets/html5.svg" width={68} alt="HTMl5 Icon" />
-                <Figure.Caption>HTML5</Figure.Caption>
-              </Figure>
-            </Row>
-          </Col>
-        </Container>
-      </Row>
-    </div>
+const Technologies = () => {
+  const tech_data = [
+    {
+      uri: "/assets/js_badge.svg",
+      caption: "JavaScript",
+    },
+    {
+      uri: "/assets/react.svg",
+      caption: "React",
+    },
+    {
+      uri: "/assets/react.svg",
+      caption: "React Native",
+    },
+    {
+      uri: "/assets/typescript.svg",
+      caption: "TypeScript",
+    },
+    {
+      uri: "/assets/amplify.svg",
+      caption: "AWS Amplify",
+    },
+    {
+      uri: "/assets/nodejs_small.svg",
+      caption: "NodeJS",
+    },
+    {
+      uri: "/assets/expressjs.svg",
+      caption: "ExpressJS",
+    },
+    {
+      uri: "/assets/mongodb.svg",
+      caption: "MongoDB",
+    },
+    {
+      uri: "/assets/graphql.svg",
+      caption: "GraphQL",
+    },
+    {
+      uri: "/assets/css3.svg",
+      caption: "CSS3",
+    },
+    {
+      uri: "/assets/sass.svg",
+      caption: "SCSS",
+    },
+    {
+      uri: "/assets/html5.svg",
+      caption: "HTML5",
+    },
+  ];
+
+  const TechnologyItem = ({ tech_item: { caption, uri } }) => {
+    return (
+      <figure>
+        <img
+          alt={`${caption} Icon`}
+          style={{ display: "block", margin: "auto" }}
+          src={uri}
+          width={60}
+        ></img>
+        <figurecaption>{caption}</figurecaption>
+      </figure>
+    );
+  };
+
+  return (
+    <section className="skills_container">
+      <h1>Skills</h1>
+      <article className="icon_grid">
+        {tech_data.map((tech_item) => {
+          return (
+            <TechnologyItem
+              key={tech_item.caption}
+              tech_item={tech_item}
+            ></TechnologyItem>
+          );
+        })}
+      </article>
+    </section>
   );
 };
 
-export default Skills;
+export default Technologies;
