@@ -1,20 +1,20 @@
 .about_container {
     text-align:center;
+    text-align-last: center;
     p {
+        margin:0;
         font-size: calc(18px + 0.2vw);
         align-self: center;
-        width:clamp(30%, 240px, 100%);
+        width:clamp(30%, 280px, 100%);
         line-height:calc(32px + 0.3vw);
-        
+    
         text-align:justify;
     }
     display:flex;
-    flex:1;
     padding-top:50px;
     padding-bottom:50px;
     justify-content: flex-start;
     flex-direction: column;
-    min-height: 30vh;
     background-color: #b2b2b2;
     color: black;
 }
