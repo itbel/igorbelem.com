@@ -1,13 +1,11 @@
 .about_container {
     text-align:center;
-    text-align-last: center;
     p {
         margin:0;
         font-size: calc(18px + 0.2vw);
         align-self: center;
         width:clamp(30%, 280px, 100%);
         line-height:calc(32px + 0.3vw);
-    
         text-align:justify;
     }
     display:flex;
