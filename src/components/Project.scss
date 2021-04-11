@@ -1,0 +1,33 @@
+/* PORTFOLIO */
+.project_container {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: lightgrey;
+    padding: 16px;
+    p{
+
+        text-overflow: ellipsis;
+
+       overflow:hidden;
+    }
+    .button_container {
+        padding:16px;
+        margin-top:16px;
+        flex-direction: row;
+    }
+    .button {
+        background-color:#333333;
+        padding:12px;
+        margin:4px;
+        border-radius:4px;
+        color:white;
+        text-decoration: none;
+    }
+    .button:active {
+        background-color: grey;
+        transition: all 0.1s ease-in;
+    }
+  }
+

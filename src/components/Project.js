@@ -1,49 +1,34 @@
 import React from "react";
-import { Image, Row, Col } from "react-bootstrap";
-const Project = ({name, description, repo, pic, demo}) => {
+import "./Project.scss";
+const Project = ({ name, description, repo, pic, demo }) => {
   return (
-    <div className="projectCube">
-      <Row>
-        <Col
-          style={{
-            paddingTop: "8px",
-          }}
+    <section className="project_container">
+      <h3>{name}</h3>
+      <a target="_blank" href={pic} rel="noopener noreferrer">
+        <img width={"100%"} src={pic} alt="Project" />
+      </a>
+      <p style={{ whiteSpace: "nowrap" }}>{description}</p>
+      <div className="button_container">
+        <a
+          target="_blank"
+          className="button"
+          rel="noopener noreferrer"
+          href={repo}
         >
-          <h3>{name}</h3>
-        </Col>
-      </Row>
-      <Row className="justify-content-center pt-2">
-        <Col className="pb-1">
-          <a target="_blank" href={pic} rel="noopener noreferrer">
-            <Image
-              className="d-block w-100 p-2"
-              src={pic}
-              alt="Project Picture"
-            />
-          </a>
-          <br></br>
-          <b style={{ paddingTop: "16px" }}>{description}</b>
+          View code
+        </a>
+        {demo !== undefined ? (
           <a
             target="_blank"
+            className="button"
             rel="noopener noreferrer"
-            href={repo}
-            className="btn btn-dark d-block m-3"
+            href={demo}
           >
-            View Code
+            View demo
           </a>
-          {demo !== undefined ? (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={demo}
-              className="btn btn-dark d-block m-3"
-            >
-              View Demo
-            </a>
-          ) : null}
-        </Col>
-      </Row>
-    </div>
+        ) : null}
+      </div>
+    </section>
   );
 };
 
