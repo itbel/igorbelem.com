@@ -4,9 +4,9 @@ import "./Home.scss";
 const Banner = ({ name, position, github, linkedin, location }) => {
   return (
     <article className="banner">
-      <h1 className="header">{name}</h1>
-      <h4 style={{margin:4}}>{position}</h4>
-      <h6>{location}</h6>
+      <h1>{name}</h1>
+      <h3>{position}</h3>
+      <h5>{location}</h5>
       <section className="links_container">
         <a aria-label="Visit my GitHub profile" href={github}>
           <img width={50} src="/assets/github.svg" alt="GitHub Icon"></img>
