@@ -7,7 +7,7 @@ const Project = ({ name, description, repo, pic, demo }) => {
       <a target="_blank" href={pic} rel="noopener noreferrer">
         <img width={"100%"} src={pic} alt="Project" />
       </a>
-      <p style={{ whiteSpace: "nowrap" }}>{description}</p>
+      <p>{description}</p>
       <div className="button_container">
         <a
           target="_blank"
