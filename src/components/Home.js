@@ -9,7 +9,7 @@ const Banner = ({ name, position, github, linkedin, location }) => {
       <h6>{location}</h6>
       <section className="links_container">
         <a aria-label="Visit my GitHub profile" href={github}>
-          <img aria-label="GitHub Link" width={50} src="/assets/github.svg" alt="GitHub Icon"></img>
+          <img width={50} src="/assets/github.svg" alt="GitHub Icon"></img>
         </a>
         <a aria-label="Visit my Linkedin profile" href={linkedin}>
           <img width={50} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
