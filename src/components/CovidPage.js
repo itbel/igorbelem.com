@@ -79,7 +79,7 @@ const CovidPage = () => {
               }) : null}
           </tbody>
         </table>
-        {fieldData.length ? null:  <Spinner/>}
+        {fieldData.length ? null:  <div className="spinner_container"><Spinner/></div>}
       </div>
     </div>
   );
