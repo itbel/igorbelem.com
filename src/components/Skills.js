@@ -60,7 +60,8 @@ const Technologies = () => {
           alt={`${caption} Icon`}
           style={{ display: "block", margin: "auto" }}
           src={uri}
-          width={60}
+          width={55}
+          height={55}
         ></img>
         <figcaption>{caption}</figcaption>
       </figure>
