@@ -1,9 +1,9 @@
 .about_container {
     text-align:center;
     p {
-        font-size:18px;
+        font-size: calc(16px + 0.3vw);
         align-self: center;
-        width:clamp(20%, 300px, 100%);
+        width:clamp(20%, 240px, 100%);
         padding:16px;
         text-align:justify;
     }
