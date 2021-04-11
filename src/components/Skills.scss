@@ -8,12 +8,15 @@
     padding-bottom:50px;
     color: black;
     background-color: #dfdfdf;
+    figure {
+        margin:0;
+        padding:0;
+    }
     .icon_grid{
         margin-top:40px;
-        justify-content: center;
         display:grid;
-        gap: 3vw;
-        grid-template-columns: repeat(4, 1fr);
+        gap:2vw 4vw;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
