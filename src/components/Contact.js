@@ -60,11 +60,11 @@ const Contact = () => {
   return (
     <footer className="contact_container">
       <h1>Contact</h1>
-      <h5>Feel free to contact me and I'll respond as soon as I can</h5>
+      <h3>Feel free to contact me and I'll respond as soon as I can</h3>
       <div className="contact_flex">
         <div className="contact_info">
-          <h5>Contact Info</h5>
-          <small>igortbelem@gmail.com</small>
+          <h4>Contact Info</h4>
+          <p>igortbelem@gmail.com</p>
         </div>
         <form className="contact_form" onSubmit={handleSubmit}>
         <h4>Get in touch</h4>
