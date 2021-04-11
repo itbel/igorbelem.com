@@ -13,13 +13,14 @@
        overflow:hidden;
     }
     .button_container {
-        padding:16px;
+        padding:12px;
         margin-top:16px;
         flex-direction: row;
     }
     .button {
         background-color:#333333;
-        padding:12px;
+        padding:calc(7px + 0.2vw);
+        font-size: calc(13px + 0.1vw);
         margin:4px;
         border-radius:4px;
         color:white;
