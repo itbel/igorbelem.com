@@ -9,30 +9,38 @@
   align-items: center;
   background-image: url(/assets/coding.jpg);
   background-size: cover;
-
+  filter:contrast(1.09);
   .banner {
-    margin-bottom: 16px;
     h1{
       margin:4px 0 0 0;
+      text-transform: uppercase;
+      text-shadow: 2px 2px grey;
+      font-size: 4rem;
+      letter-spacing: 0.6rem;
+      font-weight: 700;
     }
-    h3 {
-      margin:2px 0 2px 0;
-    }
-    h5 {
-      margin-bottom:16px;
-      margin-top:8px;
+    h2 {
+      margin:30px 0 30px 0;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
     }
     text-align: center;
-    $card_background: rgba(176, 172, 170, 0.9);
-    $font_color: black;
     border-radius: 4px;
     padding: 16px;
-    background-color: $card_background;
-    color: $font_color;
+    color: #efefef;
     width: 100vw;
     .links_container {
       > *:not(:first-child) {
         margin-left: 16px;
+      }
+    }
+    @media (max-width: 768px) {
+      h1{
+        font-size:3rem;
+      }
+      h2 {
+        font-size:1.3rem;
+        letter-spacing: 0.2rem;
       }
     }
   }

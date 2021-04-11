@@ -5,14 +5,13 @@ const Banner = ({ name, position, github, linkedin, location }) => {
   return (
     <article className="banner">
       <h1>{name}</h1>
-      <h3>{position}</h3>
-      <h5>{location}</h5>
+      <h2>{position}</h2>
       <section className="links_container">
         <a aria-label="Visit my GitHub profile" href={github}>
-          <img width={50} src="/assets/github.svg" alt="GitHub Icon"></img>
+          <img width={24} src="/assets/github.svg" alt="GitHub Icon"></img>
         </a>
         <a aria-label="Visit my Linkedin profile" href={linkedin}>
-          <img width={50} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
+          <img width={24} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
         </a>
       </section>
     </article>
