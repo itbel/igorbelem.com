@@ -19,7 +19,7 @@ const Portfolio = () => {
         <Project
           name={"Bolao APP"}
           description={
-            "A Soccer tournament result guessing application built with React Native. This shares a backend with footGuess."
+            "Soccer tournaments application built with React Native. Shares a backend with footGuess."
           }
           repo={"https://github.com/itbel/bolao"}
           pic={"/assets/bolaoapp.jpg"}
@@ -29,7 +29,7 @@ const Portfolio = () => {
           demo={"http://bolao-app.crabdance.com"}
           name={"footGuess"}
           description={
-            "Soccer Guessing Tournaments Application using MERN Stack"
+            "Soccer tournaments application built using MERN Stack"
           }
           repo={"https://github.com/itbel/footGuess"}
           pic={"/assets/footGuess.png"}

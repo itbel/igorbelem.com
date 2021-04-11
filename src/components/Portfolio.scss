@@ -1,18 +1,17 @@
 .portfolio_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align:center;
   flex-direction: column;
   padding-top: 50px;
   padding-bottom: 50px;
   color: lightgrey;
   background-color: #333333;
   .portfolio_grid {
-    margin: 16px;
-    margin-top: 40px;
+    width:100%;
     justify-content: center;
     display: grid;
     gap: 3vw;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, 350px);
   }
 }
