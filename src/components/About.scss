@@ -1,10 +1,11 @@
 .about_container {
     text-align:center;
     p {
-        font-size: calc(16px + 0.3vw);
+        font-size: calc(18px + 0.2vw);
         align-self: center;
-        width:clamp(20%, 240px, 100%);
-        padding:16px;
+        width:clamp(30%, 240px, 100%);
+        line-height:calc(32px + 0.3vw);
+        
         text-align:justify;
     }
     display:flex;
