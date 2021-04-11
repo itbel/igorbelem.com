@@ -4,7 +4,7 @@ import "./Portfolio.scss";
 const Portfolio = () => {
   return (
     <section className="portfolio_container">
-      <h1>My Projects</h1>
+      <h1>Projects</h1>
       <article className="portfolio_grid">
         <Project
           demo={"http://react-chatapp.crabdance.com/"}
