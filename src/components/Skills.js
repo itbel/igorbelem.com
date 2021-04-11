@@ -1,58 +1,58 @@
 import React from "react";
 import "./Skills.scss";
 
-const Technologies = () => {
-  const tech_data = [
-    {
-      uri: "/assets/js_badge.svg",
-      caption: "JavaScript",
-    },
-    {
-      uri: "/assets/react.svg",
-      caption: "React",
-    },
-    {
-      uri: "/assets/react.svg",
-      caption: "React Native",
-    },
-    {
-      uri: "/assets/typescript.svg",
-      caption: "TypeScript",
-    },
-    {
-      uri: "/assets/amplify.svg",
-      caption: "AWS Amplify",
-    },
-    {
-      uri: "/assets/nodejs_small.svg",
-      caption: "NodeJS",
-    },
-    {
-      uri: "/assets/expressjs.svg",
-      caption: "ExpressJS",
-    },
-    {
-      uri: "/assets/mongodb.svg",
-      caption: "MongoDB",
-    },
-    {
-      uri: "/assets/graphql.svg",
-      caption: "GraphQL",
-    },
-    {
-      uri: "/assets/css3.svg",
-      caption: "CSS3",
-    },
-    {
-      uri: "/assets/sass.svg",
-      caption: "SCSS",
-    },
-    {
-      uri: "/assets/html5.svg",
-      caption: "HTML5",
-    },
-  ];
+const tech_data = [
+  {
+    uri: "/assets/js_badge.svg",
+    caption: "JavaScript",
+  },
+  {
+    uri: "/assets/react.svg",
+    caption: "React",
+  },
+  {
+    uri: "/assets/react.svg",
+    caption: "React Native",
+  },
+  {
+    uri: "/assets/typescript.svg",
+    caption: "TypeScript",
+  },
+  {
+    uri: "/assets/amplify.svg",
+    caption: "AWS Amplify",
+  },
+  {
+    uri: "/assets/nodejs_small.svg",
+    caption: "NodeJS",
+  },
+  {
+    uri: "/assets/expressjs.svg",
+    caption: "ExpressJS",
+  },
+  {
+    uri: "/assets/mongodb.svg",
+    caption: "MongoDB",
+  },
+  {
+    uri: "/assets/graphql.svg",
+    caption: "GraphQL",
+  },
+  {
+    uri: "/assets/css3.svg",
+    caption: "CSS3",
+  },
+  {
+    uri: "/assets/sass.svg",
+    caption: "SCSS",
+  },
+  {
+    uri: "/assets/html5.svg",
+    caption: "HTML5",
+  },
+];
 
+const Technologies = () => {
   const TechnologyItem = ({ tech_item: { caption, uri } }) => {
     return (
       <figure>
@@ -62,7 +62,7 @@ const Technologies = () => {
           src={uri}
           width={60}
         ></img>
-        <figurecaption>{caption}</figurecaption>
+        <figcaption>{caption}</figcaption>
       </figure>
     );
   };
