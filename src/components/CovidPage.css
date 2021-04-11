@@ -2,12 +2,8 @@
     margin:auto;
     margin-top: calc(44px + 3vh);
     width:700px;
-    padding:32px;
     overflow-x:auto;
-  }
-  ::-webkit-scrollbar {
-    height: 0.2em;
-  }
+}
   .pageHeader {
     margin-top:16px;
     font-family: monospace;
