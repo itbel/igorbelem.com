@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Container, Col, Row } from "react-bootstrap";
+import "./Contact.scss";
 import Axios from "axios";
 import Spinner from "./Spinner";
 
@@ -19,31 +19,33 @@ const Contact = () => {
             email: email,
             message: message,
           };
-          try{
-            setIsSending(true)
+          try {
+            setIsSending(true);
             const response = await Axios({
-              method: 'post',
+              method: "post",
               url: `https://33qka4mlhl.execute-api.us-east-1.amazonaws.com/prod/contact`,
               data: {
                 body: emailData.message,
-                email: emailData.email
+                email: emailData.email,
               },
-              headers:{
-                "x-api-key" : "5DCuVm7b9AZDGeOyak2k7pGBSe3ZnEk2b3v27cf0",
-                'Content-Type': 'application/json',
-              }
-            })
-            console.log(response)
-            alert("Message was sent successfully")
+              headers: {
+                "x-api-key": "5DCuVm7b9AZDGeOyak2k7pGBSe3ZnEk2b3v27cf0",
+                "Content-Type": "application/json",
+              },
+            });
+            console.log(response);
+            alert("Message was sent successfully");
             setName("");
             setEmail("");
             setMessage("");
-          }catch(err){
-            console.error(err)
-            setIsSending(false)
-            alert("An error occured. Please try again later, or contact through e-mail")
-          } finally{
-            setIsSending(false)
+          } catch (err) {
+            console.error(err);
+            setIsSending(false);
+            alert(
+              "An error occured. Please try again later, or contact through e-mail"
+            );
+          } finally {
+            setIsSending(false);
           }
         } else {
           alert("Message must not exceed 10,000 characters");
@@ -56,58 +58,54 @@ const Contact = () => {
     }
   };
   return (
-    <div className="contact pl-5 pr-5 pb-5 justify-content-center">
+    <footer className="contact_container">
       <h1>Contact</h1>
-      <br></br>
       <h5>Feel free to contact me and I'll respond as soon as I can</h5>
-      <br></br>
-      <Container>
-        <Row>
-          <Col>
-            <h5>Contact Info</h5>
-            <p>
-              <small>igortbelem@gmail.com</small>
-            </p>
-          </Col>
-          <Col xs={12} lg={8}>
-            <Form style={{ textAlign: "left" }} onSubmit={handleSubmit}>
-              <h4>Get in touch</h4>
-              <Form.Group controlId="name">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                  value={name}
-                  type="text"
-                  placeholder="Your name"
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </Form.Group>
-              <Form.Group controlId="email">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  value={email}
-                  type="email"
-                  placeholder="Your email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Form.Group>
-              <Form.Group controlId="message">
-                <Form.Label>Message:</Form.Label>
-                <Form.Control
-                  value={message}
-                  as="textarea"
-                  placeholder="Your message"
-                  rows="8"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </Form.Group>
-              <Button type="submit" variant="dark" style={{ width:"100%", minHeight:38 }}>
-                {isSending ? <div><Spinner/></div> : "Submit"}
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      <div className="contact_flex">
+        <div className="contact_info">
+          <h5>Contact Info</h5>
+          <small>igortbelem@gmail.com</small>
+        </div>
+        <form className="contact_form" onSubmit={handleSubmit}>
+        <h4>Get in touch</h4>
+            <label htmlFor="name">Name</label>
+            <input
+              required
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              value={name}
+              type="text"
+              id="name"
+              name="name"
+            />
+            <label htmlFor="email">Email address</label>
+            <input
+              required
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email"
+              value={email}
+              type="text"
+              id="email"
+              name="email"
+            />
+            <label htmlFor="message">Message</label>
+            <textarea
+              style={{
+                resize: "none",
+              }}
+              required
+              onChange={(e) => setMessage(e.target.value)}
+              id="message"
+              placeholder="Your message"
+              name="message"
+              rows={8}
+            />
+            <button style={{ minHeight: 38, position:'relative' }} type="submit">
+              {isSending ? <Spinner /> : "Submit"}
+            </button>
+        </form>
+      </div>
+    </footer>
   );
 };
 
