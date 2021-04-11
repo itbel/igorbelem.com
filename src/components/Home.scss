@@ -1,10 +1,6 @@
-@use "./Theme.scss";
-
-$dark_theme: "";
-$light_theme: "";
-
 .home_container {
     min-height: 100vh;
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -20,9 +16,9 @@ $light_theme: "";
     > *:not(:first-child){
         margin-bottom:16px;
     }
+    text-align:center;
     $card_background: rgba(176, 172, 170, 0.9);
     font-family: Lato;
-    opacity:1;
     $font_color: black;
     border-radius:4px;
     padding:16px;
