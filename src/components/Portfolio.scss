@@ -13,5 +13,9 @@
     display: grid;
     gap: 3vw;
     grid-template-columns: repeat(auto-fit, 350px);
+    @media (max-width:768px){
+      grid-template-columns: repeat(auto-fit, 85vw);
+      gap: 10vw;
+    }
   }
 }
