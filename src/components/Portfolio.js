@@ -13,7 +13,7 @@ const Portfolio = () => {
             "A chat application made using the MERN stack and Socket.IO"
           }
           repo={"https://github.com/itbel/ReactChatApplication"}
-          pic={"/assets/chatApp.png"}
+          pic={"https://port-itbel.s3.amazonaws.com/assets/chatApp.png"}
         ></Project>
 
         <Project
@@ -22,7 +22,7 @@ const Portfolio = () => {
             "Soccer tournaments application built with React Native. Shares a backend with footGuess."
           }
           repo={"https://github.com/itbel/bolao"}
-          pic={"/assets/bolaoapp.jpg"}
+          pic={"https://port-itbel.s3.amazonaws.com/assets/bolaoapp.jpg"}
         ></Project>
 
         <Project
@@ -32,7 +32,7 @@ const Portfolio = () => {
             "Soccer tournaments application built using MERN Stack"
           }
           repo={"https://github.com/itbel/footGuess"}
-          pic={"/assets/footGuess.png"}
+          pic={"https://port-itbel.s3.amazonaws.com/assets/footGuess.png"}
         ></Project>
       </article>
     </section>
