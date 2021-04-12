@@ -8,10 +8,10 @@ const Banner = ({ name, position, github, linkedin, location }) => {
       <h2>{position}</h2>
       <section className="links_container">
         <a aria-label="Visit my GitHub profile" href={github}>
-          <img width={24} src="https://port-itbel.s3.amazonaws.com/assets/github.svg" alt="GitHub Icon"></img>
+          <img width={24} src="/assets/github.svg" alt="GitHub Icon"></img>
         </a>
         <a aria-label="Visit my Linkedin profile" href={linkedin}>
-          <img width={24} src="https://port-itbel.s3.amazonaws.com/assets/LIblack.svg" alt="LinkedIn Icon"></img>
+          <img width={24} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
         </a>
       </section>
     </article>

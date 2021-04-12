@@ -3,51 +3,51 @@ import "./Skills.scss";
 
 const tech_data = [
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/js_badge.svg",
+    uri: "/assets/js_badge.svg",
     caption: "JavaScript",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/react.svg",
+    uri: "/assets/react.svg",
     caption: "React",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/react.svg",
+    uri: "/assets/react.svg",
     caption: "React Native",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/typescript.svg",
+    uri: "/assets/typescript.svg",
     caption: "TypeScript",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/amplify.svg",
+    uri: "/assets/amplify.svg",
     caption: "AWS Amplify",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/nodejs_small.svg",
+    uri: "/assets/nodejs_small.svg",
     caption: "NodeJS",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/expressjs.svg",
+    uri: "/assets/expressjs.svg",
     caption: "ExpressJS",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/mongodb.svg",
+    uri: "/assets/mongodb.svg",
     caption: "MongoDB",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/graphql.svg",
+    uri: "/assets/graphql.svg",
     caption: "GraphQL",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/css3.svg",
+    uri: "/assets/css3.svg",
     caption: "CSS3",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/sass.svg",
+    uri: "/assets/sass.svg",
     caption: "SCSS",
   },
   {
-    uri: "https://port-itbel.s3.amazonaws.com/assets/html5.svg",
+    uri: "/assets/html5.svg",
     caption: "HTML5",
   },
 ];
