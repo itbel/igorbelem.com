@@ -5,7 +5,7 @@ const Project = ({ name, description, repo, pic, demo }) => {
     <section className="project_container">
       <h3>{name}</h3>
       <a target="_blank" href={pic} rel="noopener noreferrer">
-        <img src={pic} alt="Project" />
+        <img src={pic} alt={`${name} Project`} />
       </a>
       <p>{description}</p>
       <div className="button_container">
