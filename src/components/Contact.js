@@ -58,7 +58,7 @@ const Contact = () => {
     }
   };
   return (
-    <footer className="contact_container">
+    <footer id="contact" className="contact_container">
       <h1>Contact</h1>
       <h3>Feel free to contact me and I'll respond as soon as I can</h3>
       <div className="contact_flex">

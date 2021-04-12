@@ -20,7 +20,7 @@ const Banner = ({ name, position, github, linkedin, location }) => {
 
 const Home = () => {
   return (
-    <section className="home_container">
+    <section id="hero" className="home_container">
       <Banner
         name="Igor Belem"
         position="Full Stack Developer"
