@@ -2,7 +2,7 @@ import React from "react";
 import "./Project.scss";
 const Project = ({ name, description, repo, pic, demo }) => {
   return (
-    <section className="project_container">
+    <article className="project_container">
       <h3>{name}</h3>
       <a target="_blank" href={pic} rel="noopener noreferrer">
         <img src={pic} alt={`${name} Project`} />
@@ -28,7 +28,7 @@ const Project = ({ name, description, repo, pic, demo }) => {
           </a>
         ) : null}
       </div>
-    </section>
+    </article>
   );
 };
 
