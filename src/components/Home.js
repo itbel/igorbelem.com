@@ -6,14 +6,14 @@ const Banner = ({ name, position, github, linkedin, location }) => {
     <article className="banner">
       <h1>{name}</h1>
       <h2>{position}</h2>
-      <section className="links_container">
+      <article className="links_container">
         <a aria-label="Visit my GitHub profile" href={github}>
           <img width={24} src="/assets/github.svg" alt="GitHub Icon"></img>
         </a>
         <a aria-label="Visit my Linkedin profile" href={linkedin}>
           <img width={24} src="/assets/LIblack.svg" alt="LinkedIn Icon"></img>
         </a>
-      </section>
+      </article>
     </article>
   );
 };
