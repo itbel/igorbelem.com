@@ -54,7 +54,7 @@ const CovidPage = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"white", height:'100vh'}}>
       <div style={{ overflowY: "auto", overflowX: "auto" }}>
         <h1 className="pageHeader" colSpan={4}>
           Ontario - Vaccinations
