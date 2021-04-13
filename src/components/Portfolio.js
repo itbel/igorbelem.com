@@ -6,20 +6,19 @@ const Portfolio = () => {
     <section className="portfolio_container">
       <h1>Projects</h1>
       <article className="portfolio_grid">
-        <Project
-          demo={"http://react-chatapp.crabdance.com/"}
-          name={"ReactChatApplication"}
+      <Project
+          demo={"https://igorbelem.com/covid"}
+          name={"Ontario Covid Vaccinations Tracker"}
           description={
-            "A chat application made using the MERN stack and Socket.IO"
+            "Uses AWS Lambda and AWS S3, to fetch and store data from the Ontario Data Catalogue"
           }
-          repo={"https://github.com/itbel/ReactChatApplication"}
-          pic={"/assets/chatApp.png"}
+          repo={"https://github.com/itbel/covid-vaccines-tracker-ON"}
+          pic={"/assets/covid.png"}
         ></Project>
-
         <Project
           name={"Bolao APP"}
           description={
-            "Soccer tournaments application built with React Native. Shares a backend with footGuess."
+            "Soccer tournaments application built with React Native. Shares a backend with footGuess"
           }
           repo={"https://github.com/itbel/bolao"}
           pic={"/assets/bolaoapp.jpg"}
