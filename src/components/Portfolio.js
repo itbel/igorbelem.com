@@ -16,11 +16,11 @@ const Portfolio = () => {
           pic={"/assets/covid.png"}
         ></Project>
         <Project
-          name={"Bolao APP"}
+          name={"Bolao"}
           description={
             "Soccer tournaments application built with React Native. Shares a backend with footGuess"
           }
-          repo={"https://github.com/itbel/bolao"}
+          repo={"https://github.com/itbel/bolao_legacy"}
           pic={"/assets/bolaoapp.jpg"}
         ></Project>
 
