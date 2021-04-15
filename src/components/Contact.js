@@ -100,7 +100,7 @@ const Contact = () => {
               name="message"
               rows={8}
             />
-            <button style={{ minHeight: 38, position:'relative' }} type="submit">
+            <button style={{ maxHeight: 38, position:'relative' }} type="submit">
               {isSending ? <Spinner /> : "Submit"}
             </button>
         </form>
