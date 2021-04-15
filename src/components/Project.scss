@@ -1,36 +1,66 @@
 .project_container {
-    border-radius: 4px;
-    display: flex;
+  display: flex;
+  color: black;
+  padding: 0 10vw;
+  flex-direction: row;
+  @media (max-width: 768px){
     flex-direction: column;
-    color: black;
-    background-color: lightgrey;
-    text-align:center;
-    padding: 16px;
+    padding:2vw;
+    }
+  .project_pic {
+    flex:1;
     img {
-        object-fit:contain;
-        width: 100%;
-        height: 203px;
-    }
-    p {
-        font-size:calc(14px + 0.1vw);
-    }
-    .button_container {
-        padding:12px;
-        margin-top:16px;
-        flex-direction: row;
-    }
-    .button {
-        background-color:#333333;
-        padding:calc(7px + 0.2vw);
-        font-size: calc(13px + 0.1vw);
-        margin:4px;
-        border-radius:4px;
-        color:white;
-        text-decoration: none;
-    }
-    .button:active {
-        background-color: grey;
-        transition: all 0.1s ease-in;
+      margin: auto;
+      max-height: 300px;
+      max-width:100%;
     }
   }
-
+  .project_desc {
+    margin: auto;
+    flex:1;
+    h3 {
+      font-size: 2.8rem;
+      margin: 0 0 0.8rem;
+    }
+    p {
+      font-size: 1rem;
+      text-align: left;
+      line-height: 1.6;
+      margin: auto auto 20px;
+      text-align-last: center;
+      width: 85%;
+      @media(max-width:768px){
+          max-width:100%;
+      }
+    }
+    .button_container {
+      font-weight: bold;
+      padding-top:0.8rem;
+      :nth-child(odd) {
+        background-color: transparent;
+        border: solid 1px black;
+        color: black;
+      }
+      margin-top: 16px;
+      flex-direction: row;
+    }
+    .button {
+      background-color: #333333;
+      border: solid 1px transparent;
+      padding: 0.5rem;
+      font-size: calc(13px + 0.1vw);
+      margin: 6px;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+    }
+    .button:active {
+      background-color: grey;
+      transition: all 0.1s ease-in;
+    }
+    .button:hover {
+      background-color: grey;
+      transition: all 0.1s ease-in;
+    }
+  }
+}

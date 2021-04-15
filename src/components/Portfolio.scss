@@ -3,22 +3,19 @@
   justify-content: center;
   text-align:center;
   flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: lightgrey;
-  background-color: #333333;
+  gap:4rem;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  color: black;
+  :nth-child(even){
+    flex-direction: row-reverse;
+    @media (max-width:768px) {
+      flex-direction: column;
+      
+    }
+  }
+  background-color: #dfdfdf;
   h1{
     margin-top:0;
-}
-  .portfolio_grid {
-    width:100%;
-    justify-content: center;
-    display: grid;
-    gap: 3vw;
-    grid-template-columns: repeat(auto-fit, 350px);
-    @media (max-width:768px){
-      grid-template-columns: repeat(auto-fit, 85vw);
-      gap: 10vw;
-    }
   }
 }
