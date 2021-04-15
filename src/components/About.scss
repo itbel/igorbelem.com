@@ -2,20 +2,24 @@
     text-align:center;
     p {
         margin:0;
-        font-size: calc(18px + 0.2vw);
+        font-size: 1.5rem;
         align-self: center;
-        width:clamp(30%, 280px, 100%);
+        width:clamp(45ch, 50%, 75ch);
         line-height:calc(32px + 0.3vw);
         text-align:left;
+        @media (max-width: 768px) {
+            width:clamp(30%, 280px, 100%);
+        }
     }
     h1 {
         margin-top:0;
+        font-size:3rem;
     }
     display:flex;
-    padding-top:50px;
-    padding-bottom:50px;
+    padding-top:10vh;
+    padding-bottom:10vh;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: #b2b2b2;
+    background-color: #dfdfdf;
     color: black;
 }
