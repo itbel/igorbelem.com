@@ -1,74 +1,83 @@
 .tableTheme {
-    margin:auto;
+    margin: auto;
     margin-top: calc(44px + 3vh);
-    width:700px;
-    overflow-x:auto;
+    width: 60vw;
+    overflow-x: auto;
 }
-  .pageHeader {
-    margin-top:16px;
+
+.pageHeader {
+    margin-top: 16px;
     font-family: monospace;
-    text-align:center;
+    text-align: center;
     font-size: 18px;
-    font-weight:bold;
+    font-weight: bold;
     position: absolute;
     margin-left: auto;
     overflow-x: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-  }
-  .tableHeader {
+}
+
+.tableHeader {
     background-color: #F5F5F5;
-    text-align:center;
-    padding:8px;
+    text-align: center;
+    padding: 8px;
     font-family: monospace;
-    font-size:15px;
-  }
-  @keyframes slideIn {
+    font-size: 15px;
+}
+
+@keyframes slideIn {
     from {
-      transform: translateX(-2000px)
+        transform: translateX(-2000px)
     }
     to {
-      transform: translateX(0px);
+        transform: translateX(0px);
     }
-  }
-  .tableRow{
+}
+
+.tableRow {
     animation: slideIn;
-  }
-  .tableRow :hover{
-    cursor:default;
+}
+
+.tableRow :hover {
+    cursor: default;
     background-color: #efefef;
-  }
-  .tableCell {
+}
+
+.tableCell {
     font-family: monospace;
-    padding:8px;
+    padding: 8px;
     font-size: 13px;
     text-align: center;
-  }
+}
 
-  .spinner_container{
+.spinner_container {
     position: absolute;
-    top:10%;
+    top: 10%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    width:24px;
-    height:24px;
-  }
+    width: 24px;
+    height: 24px;
+}
 
-  @media (max-width: 767px){
-    .spinner_container{
-      top:20%;
+@media (max-width: 767px) {
+    .tableTheme {
+        width: 100vw;
     }
-    .tableCell{
-      font-size:12px;
-      width:50vw;
+    .spinner_container {
+        top: 20%;
     }
-    .tableHeader{
-      font-size:13px;
+    .tableCell {
+        font-size: 12px;
+        width: 50vw;
     }
-    .pageHeader{
-      font-size:18px;
+    .tableHeader {
+        font-size: 13px;
     }
-  }
+    .pageHeader {
+        font-size: 18px;
+    }
+}

@@ -20,8 +20,11 @@ const CovidPage = () => {
           }
         );
         const data = await response.json();
-        setFieldData(data.body.records);
-        setHeaderData(data.body.fields);
+        console.log(data.body)
+        console.log(Object.keys(data.body[0]))
+        setFieldData(data.body);
+
+        setHeaderData(Object.keys(data.body[0]));
       } catch (err) {
         console.error(err);
       }
@@ -44,7 +47,7 @@ const CovidPage = () => {
     );
   };
   const Cells = ({ field }) => {
-    return field.map((cell, index) => {
+    return Object.values(field)?.map((cell, index) => {
       return (
         <td className="tableCell" key={index}>
           {cell}
@@ -73,11 +76,14 @@ const CovidPage = () => {
             </tr>
           </thead>
           <tbody>
-            {fieldData.length ?
+            {fieldData?.length ?
               fieldData.map((field, index) => {
                 return <Row key={index} field={field} index={index} />;
               }) : null}
           </tbody>
+          <tfoot>
+            {fieldData?.length ? <tr><td style={{fontSize:10, textAlign:'center', color:'#808080', paddingTop:30}} colSpan={3}>Contains information licensed under the <a href="https://www.ontario.ca/page/open-government-licence-ontario">Open Government Licence – Ontario.</a></td></tr> : null}
+          </tfoot>
         </table>
         {fieldData.length ? null:  <div className="spinner_container"><Spinner/></div>}
       </div>
