@@ -20,10 +20,7 @@ const CovidPage = () => {
           }
         );
         const data = await response.json();
-        console.log(data.body)
-        console.log(Object.keys(data.body[0]))
         setFieldData(data.body);
-
         setHeaderData(Object.keys(data.body[0]));
       } catch (err) {
         console.error(err);
