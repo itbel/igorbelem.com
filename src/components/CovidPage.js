@@ -45,9 +45,13 @@ const CovidPage = () => {
   };
   const Cells = ({ field }) => {
     return Object.values(field)?.map((cell, index) => {
+      let transformedCell = cell;
+      if(typeof cell === 'string' && !cell.includes('-'))
+        transformedCell = parseInt(cell)
+
       return (
         <td className="tableCell" key={index}>
-          {cell}
+          {transformedCell.toLocaleString()}
         </td>
       );
     });
