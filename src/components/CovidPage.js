@@ -86,7 +86,7 @@ const CovidPage = () => {
             {fieldData?.length ? <tr><td style={{fontSize:10, textAlign:'center', color:'#808080', paddingTop:30}} colSpan={3}>Contains information licensed under the <a href="https://www.ontario.ca/page/open-government-licence-ontario">Open Government Licence – Ontario.</a></td></tr> : null}
           </tfoot>
         </table>
-        {fieldData.length ? null:  <div className="spinner_container"><Spinner/></div>}
+        {fieldData?.length ? null:  <div className="spinner_container"><Spinner/></div>}
       </div>
     </div>
   );
