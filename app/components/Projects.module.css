@@ -14,13 +14,17 @@
   display: flex;
   gap: 7vw;
   flex-direction: row;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
   text-align: center;
+}
+.Project:last-child {
+  margin-bottom: 0;
 }
 
 .Project h3 {
   font-size: 45px;
   font-weight: 900;
+  margin-bottom: 16px;
   color: #1a1a1a;
 }
 
