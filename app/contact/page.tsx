@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Spinner from "../components/Spinner";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -8,14 +9,7 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
   return (
-    <div
-      style={{
-        flex: 1,
-        display: "flex",
-        flexDirection: "column",
-        margin: "120px 20vw",
-      }}
-    >
+    <div className={styles.ContactContainer}>
       <h1>Contact</h1>
       <h3>Feel free to contact me and I&apos;ll respond as soon as I can</h3>
 
