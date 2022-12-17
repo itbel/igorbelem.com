@@ -20,7 +20,7 @@ type Post = {
 // }
 
 export default async function Blog() {
-  const posts = []; //await getPosts();
+  const posts: Post[] = []; //await getPosts();
   return (
     <div className={styles.PostsContainer}>
       {posts.map((post) => (
