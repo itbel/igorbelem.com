@@ -8,7 +8,6 @@ export default async function handler(
     const client = await clientPromise;
     const db = client.db("portfolio");
     const posts = await db.collection("posts").find({}).toArray();
-    console.log({ posts });
     res.status(200).json({ posts });
   } catch (error) {
     console.error({ error });
