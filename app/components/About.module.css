@@ -1,0 +1,13 @@
+.AboutContainer {
+  background-color: #dfdfdf;
+  margin: 12vw 20vw;
+}
+.AboutHeadingText {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+.AboutText {
+  line-height: 36px;
+  font-size: 24px;
+}

@@ -1,0 +1,34 @@
+.SkillsContainer {
+  margin: 12vw 20vw;
+}
+
+.SkillsHeadingText {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+.SkillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.SkillText {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: default;
+}
+
+.SkillItem:hover .SkillText {
+  transform: translateY(4px);
+  transition: all cubic-bezier(0.54, 0.43, 0.36, 1.48) 0.25s;
+}
+
+.SkillItem:hover img {
+  transform: scale(1.3, 1.3);
+  transition: all cubic-bezier(0.54, 0.43, 0.36, 1.48) 0.25s;
+  filter: brightness(20%);
+  margin-bottom: -4px;
+}

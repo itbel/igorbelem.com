@@ -1,0 +1,67 @@
+.ProjectsContainer {
+  background-color: #dfdfdf;
+  margin: 12vw 20vw;
+}
+
+.ProjectHeadingText {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.Project {
+  display: flex;
+  gap: 7vw;
+  flex-direction: row;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.Project h3 {
+  font-size: 45px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.ProjectsSubContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ProjectsSubContainer :nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.ButtonContainer {
+  font-weight: bold;
+  padding-top: 0.8rem;
+
+  margin-top: 16px;
+  flex-direction: row;
+}
+.ButtonContainer :nth-child(odd) {
+  background-color: transparent;
+  border: solid 1px black;
+  color: black;
+}
+.Button {
+  background-color: #333333;
+  border: solid 1px transparent;
+  padding: 0.5rem;
+  font-size: calc(13px + 0.1vw);
+  margin: 6px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+.Button :active {
+  background-color: grey;
+  transition: all 0.1s ease-in;
+}
+.Button :hover {
+  background-color: grey;
+  transition: all 0.1s ease-in;
+}
