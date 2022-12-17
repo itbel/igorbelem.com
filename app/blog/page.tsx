@@ -23,7 +23,6 @@ async function getPosts(): Promise<Post[]> {
 }
 
 export default async function Blog() {
-  console.log({ a3: process.env });
   const posts = await getPosts();
   return (
     <div className={styles.PostsContainer}>
