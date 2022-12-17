@@ -8,19 +8,19 @@ type Post = {
   author: string;
 };
 
-async function getPosts(): Promise<Post[]> {
-  const uri =
-    process.env.NODE_ENV === "development"
-      ? process.env.API_DEV_URI
-      : process.env.API_PROD_URI;
-  const response = await fetch(`${uri}/api/blogs`);
-  const json: any = await response.json();
-  const { posts } = json;
-  return posts ?? [];
-}
+// async function getPosts(): Promise<Post[]> {
+//   const uri =
+//     process.env.NODE_ENV === "development"
+//       ? process.env.API_DEV_URI
+//       : process.env.API_PROD_URI;
+//   const response = await fetch(`${uri}/api/blogs`);
+//   const json: any = await response.json();
+//   const { posts } = json;
+//   return posts ?? [];
+// }
 
 export default async function Blog() {
-  const posts = await getPosts();
+  const posts = []; //await getPosts();
   return (
     <div className={styles.PostsContainer}>
       {posts.map((post) => (
