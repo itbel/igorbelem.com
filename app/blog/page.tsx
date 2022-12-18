@@ -13,7 +13,9 @@ async function getPosts(): Promise<Post[]> {
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
       : process.env.API_PROD_URI;
-  const response = await fetch(`${uri}/api/blogs`);
+  const response = await fetch(`${uri}/api/blogs`, {
+    cache: "no-store",
+  });
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
