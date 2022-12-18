@@ -1,0 +1,50 @@
+.HamburgerButton {
+  width: 20px;
+  height: 10px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  align-self: center;
+}
+
+.HamburgerButton span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.HamburgerButton span:nth-child(1) {
+  top: 0px;
+}
+
+.HamburgerButton span:nth-child(2) {
+  top: 4.5px;
+}
+
+.HamburgerButton span:nth-child(3) {
+  top: 9px;
+}
+
+.HamburgerButton.open span:nth-child(1) {
+  top: 4.5px;
+  transform: rotate(135deg);
+}
+
+.HamburgerButton.open span:nth-child(2) {
+  opacity: 0;
+  left: -30px;
+  transition: 0.25s ease-in-out;
+}
+
+.HamburgerButton.open span:nth-child(3) {
+  top: 4.5px;
+  transform: rotate(-135deg);
+}

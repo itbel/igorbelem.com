@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Lato } from "@next/font/google";
 import { AnalyticsWrapper } from "./components/Analytics";
+import NavBar from "./components/NavBar";
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
 });
@@ -17,7 +18,9 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        {children} <AnalyticsWrapper />
+        <NavBar />
+        <main>{children}</main>
+        <AnalyticsWrapper />
       </body>
     </html>
   );
