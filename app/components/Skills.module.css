@@ -32,3 +32,15 @@
   filter: brightness(20%);
   margin-bottom: -4px;
 }
+
+@media (max-width: 768px) {
+  .SkillItem {
+    margin-bottom: 20px;
+  }
+  .SkillsHeadingText {
+    font-size: 36px;
+  }
+  .SkillText {
+    font-size: 18px;
+  }
+}

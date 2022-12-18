@@ -22,9 +22,14 @@
 }
 
 .Project h3 {
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 900;
   margin-bottom: 16px;
+  color: #1a1a1a;
+}
+.Project p {
+  font-size: 18px;
+  line-height: 24px;
   color: #1a1a1a;
 }
 
@@ -79,6 +84,9 @@
 }
 
 @media (max-width: 768px) {
+  .ProjectHeadingText {
+    font-size: 36px;
+  }
   .Project {
     flex-direction: column;
   }
@@ -87,5 +95,10 @@
   }
   .ProjectPicture {
     width: 80vw;
+  }
+  .Project p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1a1a;
   }
 }

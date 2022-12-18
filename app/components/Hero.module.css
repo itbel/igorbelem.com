@@ -38,3 +38,13 @@
 .LinkIcon {
   margin: 0px 16px;
 }
+
+@media (max-width: 768px) {
+  .MainHeadingText {
+    font-size: 36px;
+    margin: 0px 10vw;
+  }
+  .SubHeadingText {
+    font-size: 18px;
+  }
+}
