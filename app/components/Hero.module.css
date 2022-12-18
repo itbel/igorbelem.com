@@ -1,0 +1,40 @@
+.HeroContainer {
+  background-image: url("/assets/coding.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 26, 27);
+  filter: contrast(1.05);
+}
+
+.MainHeadingText {
+  color: #fff;
+  margin-top: 4px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px grey;
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0.6rem;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+.SubHeadingText {
+  margin: 30px 10vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px grey;
+  font-size: 24px;
+  letter-spacing: 0.3rem;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.LinkIcon {
+  margin: 0px 16px;
+}
