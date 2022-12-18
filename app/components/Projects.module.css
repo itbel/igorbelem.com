@@ -60,11 +60,11 @@
 }
 .ButtonContainer :nth-child(odd) {
   background-color: transparent;
-  border: solid 1px black;
-  color: black;
+  border: solid 1px #c33232;
+  color: #c33232;
 }
 .Button {
-  background-color: #333333;
+  background-color: #c33232;
   border: solid 1px transparent;
   padding: 0.5rem;
   font-size: calc(13px + 0.1vw);

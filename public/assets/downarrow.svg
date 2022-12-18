@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 803 600" xmlns="http://www.w3.org/2000/svg">
-<g>
-<title>Layer 1</title>
-<line transform="rotate(141 324.19 302.68)" x1="324.19" x2="324.19" y1="163.92" y2="441.44" fill="none" fill-opacity="null" opacity="undefined" stroke="#FFF" stroke-dasharray="null" stroke-linecap="undefined" stroke-linejoin="undefined" stroke-opacity="null" stroke-width="30"/>
-<line transform="rotate(219 488.69 302.68)" x1="488.69" x2="488.69" y1="163.92" y2="441.44" fill="none" fill-opacity="null" opacity="undefined" stroke="#FFF" stroke-dasharray="null" stroke-linecap="undefined" stroke-linejoin="undefined" stroke-opacity="null" stroke-width="30"/>
-</g>
+    <g>
+        <title>Layer 1</title>
+        <line transform="rotate(141 324.19 302.68)" x1="324.19" x2="324.19" y1="163.92" y2="441.44" fill="none"
+            fill-opacity="null" opacity="undefined" stroke="#c33232" stroke-dasharray="null" stroke-linecap="undefined"
+            stroke-linejoin="undefined" stroke-opacity="null" stroke-width="30" />
+        <line transform="rotate(219 488.69 302.68)" x1="488.69" x2="488.69" y1="163.92" y2="441.44" fill="none"
+            fill-opacity="null" opacity="undefined" stroke="#c33232" stroke-dasharray="null" stroke-linecap="undefined"
+            stroke-linejoin="undefined" stroke-opacity="null" stroke-width="30" />
+    </g>
 </svg>
