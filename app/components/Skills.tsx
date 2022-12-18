@@ -65,11 +65,11 @@ const tech_data = [
 ];
 export default function Skills() {
   return (
-    <section className={styles.SkillsContainer}>
+    <section id="skills" className={styles.SkillsContainer}>
       <h2 className={styles.SkillsHeadingText}>Skills</h2>
       <ul className={styles.SkillsListContainer}>
         {tech_data.map(({ caption, uri }) => (
-          <li className={styles.SkillItem} key={uri}>
+          <li className={styles.SkillItem} key={caption}>
             <Image alt={`${caption} Icon`} src={uri} width={55} height={55} />
             <figcaption className={styles.SkillText}>{caption}</figcaption>
           </li>

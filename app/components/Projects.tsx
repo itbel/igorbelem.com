@@ -45,7 +45,7 @@ type ProjectProps = {
 };
 const Project = ({ name, description, repo, pic, demo }: ProjectProps) => {
   return (
-    <article className={styles.Project}>
+    <article id="projects" className={styles.Project}>
       <figure>
         <a target="_blank" href={pic} rel="noopener noreferrer">
           <Image
