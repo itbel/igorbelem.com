@@ -48,7 +48,13 @@ const Project = ({ name, description, repo, pic, demo }: ProjectProps) => {
     <article className={styles.Project}>
       <figure>
         <a target="_blank" href={pic} rel="noopener noreferrer">
-          <Image src={pic} alt={`${name} Project`} width={300} height={150} />
+          <Image
+            className={styles.ProjectPicture}
+            src={pic}
+            alt={`${name} Project`}
+            width={541}
+            height={276}
+          />
         </a>
       </figure>
       <div>

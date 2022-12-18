@@ -1,6 +1,6 @@
 .AboutContainer {
   background-color: #dfdfdf;
-  margin: 12vw 20vw;
+  margin: 12vw 10vw;
 }
 .AboutHeadingText {
   text-align: center;
@@ -9,5 +9,23 @@
 }
 .AboutText {
   line-height: 36px;
+  max-width: 40ch;
+  flex: 1;
   font-size: 24px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+}
+
+.AboutTextContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .AboutTextContainer {
+    flex-direction: column;
+  }
+  .AboutText {
+    margin-right: 0px;
+  }
 }

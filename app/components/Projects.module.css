@@ -1,6 +1,6 @@
 .ProjectsContainer {
   background-color: #dfdfdf;
-  margin: 12vw 20vw;
+  margin: 12vw 10vw;
 }
 
 .ProjectHeadingText {
@@ -12,9 +12,9 @@
 
 .Project {
   display: flex;
-  gap: 7vw;
   flex-direction: row;
   margin-bottom: 120px;
+  gap: 5vw;
   text-align: center;
 }
 .Project:last-child {
@@ -31,12 +31,20 @@
 .ProjectsSubContainer {
   display: flex;
   flex-direction: row;
+
   flex-wrap: wrap;
   justify-content: space-between;
+  flex: 1;
 }
 
 .ProjectsSubContainer :nth-child(even) {
   flex-direction: row-reverse;
+}
+.ProjectPicture {
+  flex: 1;
+  width: 40vw;
+  display: flex;
+  object-fit: scale-down;
 }
 
 .ButtonContainer {
@@ -68,4 +76,16 @@
 .Button :hover {
   background-color: grey;
   transition: all 0.1s ease-in;
+}
+
+@media (max-width: 768px) {
+  .Project {
+    flex-direction: column;
+  }
+  .ProjectsSubContainer :nth-child(even) {
+    flex-direction: column;
+  }
+  .ProjectPicture {
+    width: 80vw;
+  }
 }
