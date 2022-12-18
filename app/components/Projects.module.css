@@ -4,10 +4,9 @@
 }
 
 .ProjectHeadingText {
-  text-align: center;
+  text-align: left;
   font-size: 48px;
-  margin-bottom: 60px;
-  color: #1a1a1a;
+  margin-bottom: 50px;
 }
 
 .Project {
@@ -15,7 +14,7 @@
   flex-direction: row;
   margin-bottom: 120px;
   gap: 5vw;
-  text-align: center;
+  text-align: left;
 }
 .Project:last-child {
   margin-bottom: 0;
@@ -69,10 +68,12 @@
   border: solid 1px transparent;
   padding: 0.5rem;
   font-size: calc(13px + 0.1vw);
-  margin: 6px;
   border-radius: 4px;
   color: white;
   text-decoration: none;
+}
+.ButtonContainer :nth-child(even) {
+  margin-left: 8px;
 }
 .Button :active {
   background-color: grey;

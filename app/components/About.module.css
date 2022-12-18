@@ -3,9 +3,9 @@
   margin: 12vw 10vw;
 }
 .AboutHeadingText {
-  text-align: center;
+  text-align: left;
   font-size: 48px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .AboutText {
   line-height: 36px;

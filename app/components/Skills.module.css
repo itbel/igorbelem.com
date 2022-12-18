@@ -3,22 +3,25 @@
 }
 
 .SkillsHeadingText {
-  text-align: center;
+  text-align: left;
   font-size: 48px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
+
 .SkillItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
 }
+
 .SkillText {
   margin-top: 8px;
   font-weight: 700;
   font-size: 14px;
   cursor: default;
+  width: 100%;
+  text-align: center;
 }
 
 .SkillItem:hover .SkillText {
@@ -26,14 +29,45 @@
   transition: all cubic-bezier(0.54, 0.43, 0.36, 1.48) 0.25s;
 }
 
+.SkillItem img {
+  display: block;
+}
+
 .SkillItem:hover img {
   transform: scale(1.3, 1.3);
   transition: all cubic-bezier(0.54, 0.43, 0.36, 1.48) 0.25s;
-  filter: brightness(20%);
   margin-bottom: -4px;
 }
 
+.SkillsListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 @media (max-width: 768px) {
+  .SkillsListContainer {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+    row-gap: 1.5rem;
+  }
+  .SkillsListContainer .SkillItem:nth-child(3n) {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .SkillsListContainer .SkillItem:nth-child(3n) .SkillText {
+    text-align: end;
+  }
+
+  .SkillsListContainer .SkillItem:nth-child(3n-1) {
+    justify-content: center;
+    align-items: center;
+  }
+  .SkillsListContainer .SkillItem:nth-child(3n-1) .SkillText {
+    text-align: center;
+  }
   .SkillItem {
     margin-bottom: 20px;
   }
@@ -42,5 +76,9 @@
   }
   .SkillText {
     font-size: 18px;
+    text-align: left;
+  }
+  .SkillItem figure {
+    margin: 0;
   }
 }
