@@ -47,9 +47,8 @@ export default function NavBar() {
           const isActiveStyle =
             pathname === href
               ? {
-                  textShadow: "0 0 1px #1a1a1a",
-                  fontSize: 15,
-                  color: "#1a1a1a",
+                  textShadow: "0 0 1px #c33232",
+                  color: "#c33232",
                 }
               : {};
           return (
