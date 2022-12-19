@@ -3,7 +3,7 @@
   bottom: 16px;
   width: calc(40px + 5vw);
   right: 16px;
-  z-index: 1000;
+  z-index: 10;
   transition-duration: 0.3s;
   cursor: pointer;
 }

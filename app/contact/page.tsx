@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Spinner from "../components/Spinner";
 import styles from "./Contact.module.css";
-
+import Image from "next/image";
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,55 +10,111 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   return (
     <div className={styles.ContactContainer}>
-      <h1>Contact</h1>
-      <h3>Feel free to contact me and I&apos;ll respond as soon as I can</h3>
+      <div className={styles.ContactInfoContainer}>
+        <div style={{ flex: 1 }}>
+          <h1>Contact me</h1>
+          <p>Feel free to contact me and I&apos;ll respond as soon as I can</p>
+        </div>
 
-      <div>
-        <h4>Contact Info</h4>
-        <p>igortbelem@gmail.com</p>
+        <div className={styles.ContactButton}>
+          <Image
+            width={25}
+            height={25}
+            src="/assets/email_black.svg"
+            alt="GitHub Icon"
+          />
+          <a
+            style={{
+              marginLeft: 16,
+            }}
+            href="mailto:igortbelem@gmail.com"
+          >
+            igortbelem@gmail.com
+          </a>
+        </div>
+        <div className={styles.ContactButton}>
+          <Image
+            width={25}
+            height={25}
+            src="/assets/location_black.svg"
+            alt="GitHub Icon"
+          />
+          <a
+            style={{
+              marginLeft: 16,
+            }}
+          >
+            Toronto, ON, Canada
+          </a>
+        </div>
+        <div className={styles.ContactIconContainer}>
+          <a
+            className={styles.ContactIcon}
+            aria-label="Visit my GitHub profile"
+            href={"https://github.com/itbel"}
+          >
+            <Image
+              width={25}
+              height={25}
+              src="/assets/github_black.svg"
+              alt="GitHub Icon"
+            />
+          </a>
+          <div style={{ width: 20 }}></div>
+          <a
+            className={styles.ContactIcon}
+            aria-label="Visit my Linkedin profile"
+            href={"https://www.linkedin.com/in/igor-belem"}
+          >
+            <Image
+              width={25}
+              height={25}
+              src="/assets/LIblack.svg"
+              alt="LinkedIn Icon"
+            />
+          </a>
+        </div>
       </div>
-      <form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-        action="/api/email"
-      >
-        <h4>Get in touch</h4>
-        <label htmlFor="name">Name</label>
-        <input
-          required
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          value={name}
-          type="text"
-          id="name"
-          name="name"
-        />
-        <label htmlFor="email">Email address</label>
-        <input
-          required
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your email"
-          value={email}
-          type="text"
-          id="email"
-          name="email"
-        />
+      <form className={styles.FormContainer} action="/api/email">
+        <label htmlFor="name">Your Name</label>
+        <div className={styles.FormInputWithIcon}>
+          <Image width={20} height={20} src="/assets/person.svg" alt="arrow" />
+          <input
+            required
+            onChange={(e) => setName(e.target.value)}
+            placeholder=""
+            value={name}
+            type="text"
+            id="name"
+            name="name"
+          />
+        </div>
+
+        <label htmlFor="email">Email Address</label>
+        <div className={styles.FormInputWithIcon}>
+          <Image width={20} height={20} src="/assets/email.svg" alt="arrow" />
+          <input
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder=""
+            value={email}
+            type="text"
+            id="email"
+            name="email"
+          />
+        </div>
+
         <label htmlFor="message">Message</label>
         <textarea
-          style={{
-            resize: "none",
-          }}
           required
           onChange={(e) => setMessage(e.target.value)}
           id="message"
-          placeholder="Your message"
+          placeholder="Start typing your message..."
           name="message"
           rows={8}
         />
-        <button style={{ maxHeight: 38, position: "relative" }} type="submit">
-          {isSending ? <Spinner /> : "Submit"}
+        <button className={styles.FormButton} type="submit">
+          {isSending ? <Spinner /> : "Send Message"}
         </button>
       </form>
     </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./NavBar.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HamburgerButton from "./HamburgerButton";
 
 type NavLink = {
@@ -33,31 +33,39 @@ const navLinks: NavLink[] = [
 ];
 export default function NavBar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [glassy, setGlassy] = useState(false);
+  const [activeLink, setActiveLink] = useState(0);
+
   const isAnchor = (href: string) => {
     return href.includes("#");
   };
+
+  useEffect(() => {
+    document.addEventListener("scroll", (e) => {
+      setGlassy(window.scrollY > 64);
+    });
+  }, []);
+  useEffect(() => {
+    if (isOpen) setIsOpen(false);
+  }, [pathname]);
   return (
-    <nav className={styles.NavContainer}>
+    <nav className={`${styles.NavContainer} ${glassy ? styles.Glassy : ""}`}>
       <Link href="/">
         <Image src="/assets/logo.svg" alt="Logo" width={80} height={30} />
       </Link>
-      <ul>
-        {navLinks.map(({ href, label }) => {
-          const isActiveStyle =
-            pathname === href
+      {!isOpen ? (
+        <ul>
+          {navLinks.map(({ href, label }) => {
+            const isActiveStyle = pathname?.includes(href)
               ? {
                   textShadow: "0 0 1px #c33232",
                   color: "#c33232",
                 }
               : {};
-          return (
-            <li key={href}>
-              {isAnchor(href) ? (
-                <a href={href} className={styles.NavLink} style={isActiveStyle}>
-                  {label}
-                </a>
-              ) : (
+            return (
+              <li key={href}>
                 <Link
                   className={styles.NavLink}
                   style={isActiveStyle}
@@ -65,14 +73,53 @@ export default function NavBar() {
                 >
                   {label}
                 </Link>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
       <div className={styles.HamburgerContainer}>
         <HamburgerButton isOpen={isOpen} setIsOpen={() => setIsOpen(!isOpen)} />
       </div>
+      {isOpen ? (
+        <ul
+          style={{
+            position: "absolute",
+            top: 63,
+            left: 0,
+            backgroundColor: "white",
+            zIndex: 10000,
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            height: "92vh",
+            paddingLeft: "10vw",
+            paddingTop: "10vw",
+          }}
+        >
+          {navLinks.map(({ href, label }) => {
+            const isActiveStyle = pathname?.includes(href)
+              ? {
+                  textShadow: "0 0 1px #c33232",
+                  color: "#c33232",
+                }
+              : {};
+            return (
+              <li key={href}>
+                <Link
+                  onClick={() => setIsOpen(false)}
+                  className={styles.NavLink}
+                  style={isActiveStyle}
+                  href={href}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
     </nav>
   );
 }

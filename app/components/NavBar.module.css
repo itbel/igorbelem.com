@@ -1,18 +1,23 @@
 .NavContainer {
-  background: rgba(223, 223, 223, 0.5);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.8px);
-  color: #fff;
+  background: white;
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
   padding-left: 10vw;
   padding-right: 10vw;
+  z-index: 1000;
   align-items: center;
+  transition-duration: 0.4s;
   position: sticky;
   top: -1px;
 }
-
+.Glassy {
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 .NavContainer ul {
   padding-right: 80px;
   justify-content: center;
@@ -29,6 +34,12 @@
   font-size: 14px;
   border-radius: 4px;
 }
+.NavLink:hover {
+  color: black;
+  transition-duration: 0.2s;
+  font-weight: 700;
+  border-radius: 4px;
+}
 .HamburgerContainer {
   display: none;
 }
@@ -39,5 +50,9 @@
   }
   .HamburgerContainer {
     display: flex;
+  }
+  .NavLink {
+    font-size: 30px;
+    border-radius: 4px;
   }
 }

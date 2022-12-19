@@ -1,5 +1,5 @@
 .ProjectsContainer {
-  background-color: #dfdfdf;
+  background-color: #fffdfc;
   margin: 12vw 10vw;
 }
 
@@ -69,7 +69,7 @@
   padding: 0.5rem;
   font-size: calc(13px + 0.1vw);
   border-radius: 4px;
-  color: white;
+  color: #fffdfc;
   text-decoration: none;
 }
 .ButtonContainer :nth-child(even) {
