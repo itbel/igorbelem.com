@@ -27,7 +27,7 @@ export default function Hero() {
           <Image
             width={40}
             height={40}
-            src="/assets/LIblack.svg"
+            src="/assets/linkedin.svg"
             alt="LinkedIn Icon"
           />
         </a>

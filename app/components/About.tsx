@@ -2,7 +2,7 @@ import styles from "./About.module.css";
 
 export default function About() {
   return (
-    <section className={styles.AboutContainer}>
+    <section id="about" className={styles.AboutContainer}>
       <h2 className={styles.AboutHeadingText}>About Me</h2>
       <div className={styles.AboutTextContainer}>
         <p className={styles.AboutText}>

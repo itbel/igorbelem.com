@@ -1,13 +1,12 @@
 .ProjectsContainer {
-  background-color: #dfdfdf;
+  background-color: #fffdfc;
   margin: 12vw 10vw;
 }
 
 .ProjectHeadingText {
-  text-align: center;
+  text-align: left;
   font-size: 48px;
-  margin-bottom: 60px;
-  color: #1a1a1a;
+  margin-bottom: 50px;
 }
 
 .Project {
@@ -15,16 +14,21 @@
   flex-direction: row;
   margin-bottom: 120px;
   gap: 5vw;
-  text-align: center;
+  text-align: left;
 }
 .Project:last-child {
   margin-bottom: 0;
 }
 
 .Project h3 {
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 900;
   margin-bottom: 16px;
+  color: #1a1a1a;
+}
+.Project p {
+  font-size: 18px;
+  line-height: 24px;
   color: #1a1a1a;
 }
 
@@ -56,18 +60,20 @@
 }
 .ButtonContainer :nth-child(odd) {
   background-color: transparent;
-  border: solid 1px black;
-  color: black;
+  border: solid 1px #444;
+  color: #333;
 }
 .Button {
-  background-color: #333333;
+  background-color: #444;
   border: solid 1px transparent;
   padding: 0.5rem;
   font-size: calc(13px + 0.1vw);
-  margin: 6px;
   border-radius: 4px;
-  color: white;
+  color: #fffdfc;
   text-decoration: none;
+}
+.ButtonContainer :nth-child(even) {
+  margin-left: 8px;
 }
 .Button :active {
   background-color: grey;
@@ -79,6 +85,9 @@
 }
 
 @media (max-width: 768px) {
+  .ProjectHeadingText {
+    font-size: 36px;
+  }
   .Project {
     flex-direction: column;
   }
@@ -87,5 +96,10 @@
   }
   .ProjectPicture {
     width: 80vw;
+  }
+  .Project p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1a1a;
   }
 }
