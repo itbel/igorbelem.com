@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Igor Belem</title>
+      <title>Igor Belem - Full Stack Developer</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="title" content="Igor Belem - Full Stack Developer" />
       <meta
@@ -12,6 +12,19 @@ export default function Head() {
         name="keywords"
         content="full stack developer, front-end development, Typescript, ReactJS, React Native, NextJS, Node, CSS, HTML, AWS Lambda, AWS Amplify, Jest, web development, portfolio, live demos, code samples"
       />
+      <meta property="og:title" content="Igor Belem - Full Stack Developer" />
+      <meta
+        property="og:description"
+        content="Full stack developer specializing in front-end development using Typescript, ReactJS, React Native, NextJS, and Node. View portfolio of past projects with live demos and code samples on website. Strong understanding of both front-end and back-end web development. Available for new project discussions."
+      />
+      <meta property="og:url" content="https://igorbelem.com" />
+      <meta
+        property="og:image"
+        content="https://www.igorbelem.com/assets/coding_og.webp"
+      />
+      <meta content="summary_large_image" name="twitter:card" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
       <meta name="robots" content="index, follow" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
