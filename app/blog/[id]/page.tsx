@@ -5,7 +5,6 @@ async function getPost(id: string): Promise<BlogSitePost> {
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
       : process.env.API_PROD_URI;
-  console.log(process.env);
   const response = await fetch(`${uri}/api/posts/${id}`, { cache: "no-store" });
   if (!response.ok) {
     console.log(response.statusText);
