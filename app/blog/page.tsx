@@ -17,7 +17,7 @@ async function getPosts(): Promise<BlogSitePost[]> {
       : process.env.API_PROD_URI;
   const builtURI = `${uri}/api/posts`;
   console.log("builtURI ", builtURI);
-  const response = await fetch("/api/posts");
+  const response = await fetch(builtURI);
   console.log(response);
 
   if (!response.ok) {
