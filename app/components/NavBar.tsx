@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import styles from "./NavBar.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -33,7 +33,6 @@ const navLinks: NavLink[] = [
 ];
 export default function NavBar() {
   const pathname = usePathname();
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [glassy, setGlassy] = useState(false);
   const [activeLink, setActiveLink] = useState(0);
@@ -66,13 +65,23 @@ export default function NavBar() {
               : {};
             return (
               <li key={href}>
-                <Link
-                  className={styles.NavLink}
-                  style={isActiveStyle}
-                  href={href}
-                >
-                  {label}
-                </Link>
+                {isAnchor(href) ? (
+                  <a
+                    className={styles.NavLink}
+                    style={isActiveStyle}
+                    href={href}
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    className={styles.NavLink}
+                    style={isActiveStyle}
+                    href={href}
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}

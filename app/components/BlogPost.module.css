@@ -1,0 +1,68 @@
+.BlogPost {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  height: 500px;
+  min-width: 300px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: default;
+}
+
+.BlogPost a {
+  color: #fff;
+  text-decoration: none;
+}
+.BlogPost img {
+  object-fit: contain;
+  align-self: center;
+  padding: 16px;
+}
+.BlogPostContent {
+  padding: 16px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.BlogPostContent .Author {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.BlogPostContent h2 {
+  font-family: Verdana;
+  line-height: 24px;
+  font-size: 18px;
+}
+.BlogPost p {
+  margin: 0px;
+  font-family: Georgia;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.Summary {
+  margin-top: 16px;
+  display: flex;
+  flex: 1;
+}
+.Button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #000;
+  padding: 16px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.Button:hover {
+  background-color: #555;
+}

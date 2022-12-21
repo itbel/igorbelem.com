@@ -1,0 +1,38 @@
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.ButtonContainer .ErrorMessage {
+  color: tomato;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  align-self: flex-end;
+  flex: 1;
+}
+
+.FormButton {
+  height: 40px;
+  width: 200px;
+  align-self: flex-end;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #444;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+}
+.FormButton:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .ButtonContainer {
+    flex-direction: column;
+  }
+  .ButtonContainer .ErrorMessage {
+    align-self: flex-start;
+    padding-top: 8px;
+  }
+}

@@ -3,7 +3,9 @@
   padding: 0;
   margin: 0;
 }
-
+html {
+  scroll-padding-top: 12vw;
+}
 body {
   background-color: #fffdfc;
 }

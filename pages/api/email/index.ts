@@ -17,9 +17,10 @@ export default async function handler(
   )
     return res.status(400).json({ message: "Missing environment variables!" });
   else console.log("Environment variables are set...");
-  const messageContent = req.query.message;
-  const senderEmail = req.query.email;
-  const name = req.query.name;
+  const data = JSON.parse(req.body);
+  const messageContent = data.message;
+  const senderEmail = data.email;
+  const name = data.name;
   if (
     typeof messageContent !== "string" ||
     typeof senderEmail !== "string" ||
@@ -64,7 +65,8 @@ export default async function handler(
   const command = new SendEmailCommand(params);
   try {
     const data = await client.send(command);
-    console.log({ data });
+    if (data.$metadata.httpStatusCode !== 200)
+      return res.status(400).json({ message: "Failed to send e-mail" });
     return res.status(200).json({ message: "Successfully sent e-mail" });
   } catch (error) {
     console.error({ error });

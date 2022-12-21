@@ -1,71 +1,25 @@
-.ContactContainer {
-  padding: 32px;
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  padding: 8vw 10vw;
-  background-color: #fffdfc;
-  border-radius: 8px;
-}
-
-.ContactContainer h1 {
-  font-weight: 900;
-  color: #1a1a1a;
-}
-
-.ContactContainer p {
-  font-weight: 300;
-  color: #444;
-}
-
-.ContactContainer a {
-  text-decoration: none;
-  display: block;
-  color: #1a1a1a;
-}
-
 .FormContainer {
   display: flex;
   flex-direction: column;
-  background-color: #fffdfc;
-  border-radius: 8px;
   padding: 16px;
   flex: 1;
+  border-radius: 8px;
   background: rgba(111, 111, 111, 0.2);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  position: relative;
   border: 1px solid rgba(255, 255, 255, 0.27);
+  backdrop-filter: blur(7.5px);
+  position: relative;
+  min-height: 400px;
 }
-
 .FormContainer textarea {
   font-family: sans-serif;
   outline: none;
   font-size: 12px;
 }
 
-.FormInputWithIcon {
-  display: flex;
-  flex-direction: row;
-  background-color: #fff;
-  border: 2px solid #d3d3d3;
+.FormContainer textarea:focus {
+  border: 2px solid grey;
   border-radius: 4px;
-  margin-bottom: 8px;
-}
-.FormInputWithIcon img {
-  align-self: center;
-  margin-left: 8px;
-}
-
-.FormContainer input {
-  font-size: 12px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
-  width: 100%;
-  outline: none;
 }
 
 .FormContainer label {
@@ -80,21 +34,31 @@
   border: 2px solid #d3d3d3;
   border-radius: 4px;
 }
-
-.FormButton {
-  height: 40px;
-  width: 200px;
-  align-self: flex-end;
-  margin-top: 16px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #444;
-  transition: opacity 0.3s;
+.ContactContainer {
+  padding: 32px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 8vw 10vw;
+  background-color: #fffdfc;
   border-radius: 8px;
 }
-.FormButton:hover {
-  opacity: 0.9;
-  transition: opacity 0.3s;
+
+.ContactContainer h1 {
+  margin-bottom: 4px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.ContactContainer p {
+  font-weight: 300;
+  color: #444;
+}
+
+.ContactContainer a {
+  text-decoration: none;
+  display: block;
+  color: #1a1a1a;
 }
 
 .ContactButton {
@@ -144,16 +108,48 @@
 .ContactInfoContainer {
   display: flex;
   flex-direction: column;
+  padding-right: 32px;
   flex: 1;
   padding-left: 0px;
 }
 
+.ContactLocation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  cursor: default;
+}
+
 @media (max-width: 768px) {
+  .FormContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #fffdfc;
+    border-radius: 8px;
+    padding: unset;
+    flex: 1;
+    border-radius: 16px;
+    box-shadow: unset;
+    backdrop-filter: unset;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.27);
+  }
+  .ContactContainer h1 {
+    margin-bottom: 16px;
+  }
+  .ContactIconContainer {
+    margin: 8px 0px;
+  }
+  .ContactContainer p {
+    margin-bottom: 16px;
+  }
   .ContactContainer {
     flex-direction: column;
   }
   .ContactInfoContainer {
-    padding-left: 0px;
+    padding-right: 0px;
   }
   .ContactIconContainer {
     margin-left: -16px;

@@ -1,122 +1,107 @@
 "use client";
 import { useState } from "react";
 import Spinner from "../components/Spinner";
-import styles from "./Contact.module.css";
-import Image from "next/image";
+import styles from "./Form.module.css";
+import Input from "../components/Input";
+import { useRouter } from "next/navigation";
+type SendEmailParams = {
+  name: string;
+  email: string;
+  message: string;
+};
+async function sendEmail({ name, email, message }: SendEmailParams) {
+  const res = await fetch("/api/email", {
+    method: "POST",
+    body: JSON.stringify({ name, email, message }),
+  });
+  return res;
+}
 export default function Contact() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
   return (
-    <div className={styles.ContactContainer}>
-      <div className={styles.ContactInfoContainer}>
-        <div style={{ flex: 1 }}>
-          <h1>Contact me</h1>
-          <p>Feel free to contact me and I&apos;ll respond as soon as I can</p>
-        </div>
+    <form
+      style={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+      onSubmit={async (e) => {
+        e.preventDefault();
+        setErrorMessage("");
+        setIsLoading(true);
+        try {
+          const response = await sendEmail({ name, email, message });
+          if (!response.ok) {
+            const { message } = await response.json();
+            setErrorMessage(message);
+          } else {
+            router.push("/contact/success");
+          }
+        } catch (error) {
+          setErrorMessage("An error occurred..");
+        } finally {
+          setIsLoading(false);
+        }
+      }}
+    >
+      <Input
+        required
+        iconAlt="Person Icon"
+        iconSrc="/assets/person.svg"
+        label="Name"
+        placeholder="Your name"
+        onChange={(e) => {
+          setErrorMessage("");
+          setName(e.target.value);
+        }}
+        value={name}
+        type="text"
+        id="name"
+        name="name"
+      />
+      <Input
+        required
+        iconAlt="Email Icon"
+        iconSrc="/assets/email.svg"
+        label="Email Address"
+        placeholder="Your email address"
+        onChange={(e) => {
+          setErrorMessage("");
+          setEmail(e.target.value);
+        }}
+        value={email}
+        type="text"
+        id="email"
+        name="email"
+      />
 
-        <div className={styles.ContactButton}>
-          <Image
-            width={25}
-            height={25}
-            src="/assets/email_black.svg"
-            alt="GitHub Icon"
-          />
-          <a
-            style={{
-              marginLeft: 16,
-            }}
-            href="mailto:igortbelem@gmail.com"
-          >
-            igortbelem@gmail.com
-          </a>
-        </div>
-        <div className={styles.ContactButton}>
-          <Image
-            width={25}
-            height={25}
-            src="/assets/location_black.svg"
-            alt="GitHub Icon"
-          />
-          <a
-            style={{
-              marginLeft: 16,
-            }}
-          >
-            Toronto, ON, Canada
-          </a>
-        </div>
-        <div className={styles.ContactIconContainer}>
-          <a
-            className={styles.ContactIcon}
-            aria-label="Visit my GitHub profile"
-            href={"https://github.com/itbel"}
-          >
-            <Image
-              width={25}
-              height={25}
-              src="/assets/github_black.svg"
-              alt="GitHub Icon"
-            />
-          </a>
-          <div style={{ width: 20 }}></div>
-          <a
-            className={styles.ContactIcon}
-            aria-label="Visit my Linkedin profile"
-            href={"https://www.linkedin.com/in/igor-belem"}
-          >
-            <Image
-              width={25}
-              height={25}
-              src="/assets/LIblack.svg"
-              alt="LinkedIn Icon"
-            />
-          </a>
-        </div>
-      </div>
-      <form className={styles.FormContainer} action="/api/email">
-        <label htmlFor="name">Your Name</label>
-        <div className={styles.FormInputWithIcon}>
-          <Image width={20} height={20} src="/assets/person.svg" alt="arrow" />
-          <input
-            required
-            onChange={(e) => setName(e.target.value)}
-            placeholder=""
-            value={name}
-            type="text"
-            id="name"
-            name="name"
-          />
-        </div>
+      <label htmlFor="message">Message</label>
+      <textarea
+        required
+        value={message}
+        onChange={(e) => {
+          setErrorMessage("");
+          setMessage(e.target.value);
+        }}
+        id="message"
+        placeholder="Start typing your message..."
+        name="message"
+        rows={8}
+      />
+      <Spinner />
+      <div className={styles.ButtonContainer}>
+        {errorMessage ? (
+          <p className={styles.ErrorMessage}>{errorMessage}</p>
+        ) : null}
 
-        <label htmlFor="email">Email Address</label>
-        <div className={styles.FormInputWithIcon}>
-          <Image width={20} height={20} src="/assets/email.svg" alt="arrow" />
-          <input
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder=""
-            value={email}
-            type="text"
-            id="email"
-            name="email"
-          />
-        </div>
-
-        <label htmlFor="message">Message</label>
-        <textarea
-          required
-          onChange={(e) => setMessage(e.target.value)}
-          id="message"
-          placeholder="Start typing your message..."
-          name="message"
-          rows={8}
-        />
         <button className={styles.FormButton} type="submit">
-          {isSending ? <Spinner /> : "Send Message"}
+          {isLoading ? <Spinner size="small" /> : "Send Message"}
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }
