@@ -39,11 +39,11 @@ export default function Contact() {
             const { message } = await response.json();
             setErrorMessage(message);
           } else {
+            setIsLoading(false);
             router.push("/contact/success");
           }
         } catch (error) {
           setErrorMessage("An error occurred..");
-        } finally {
           setIsLoading(false);
         }
       }}
