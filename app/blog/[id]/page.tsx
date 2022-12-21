@@ -27,6 +27,7 @@ export default async function BlogPost({
         display: "flex",
         flexDirection: "column",
         margin: "8vw 10vw",
+        maxWidth: 800,
       }}
     >
       <h1
