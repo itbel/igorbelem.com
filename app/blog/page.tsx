@@ -1,8 +1,5 @@
 import styles from "./Blog.module.css";
-import Image from "next/image";
-import Link from "next/link";
 import BlogPost from "../components/BlogPost";
-import Spinner from "../components/Spinner";
 export type BlogSitePost = {
   _id: string;
   title: string;
@@ -18,8 +15,11 @@ async function getPosts(): Promise<BlogSitePost[]> {
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
       : process.env.API_PROD_URI;
-  console.log({ uri });
-  const response = await fetch(`${uri}/api/posts`);
+  const builtURI = `${uri}/api/posts`;
+  console.log("builtURI ", builtURI);
+  const response = await fetch(builtURI);
+  console.log(response);
+
   if (!response.ok) {
     console.log(response.statusText);
     throw new Error("Failed to fetch blogs");
