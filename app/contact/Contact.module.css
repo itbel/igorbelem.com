@@ -1,3 +1,39 @@
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(111, 111, 111, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  backdrop-filter: blur(7.5px);
+  position: relative;
+  min-height: 400px;
+}
+.FormContainer textarea {
+  font-family: sans-serif;
+  outline: none;
+  font-size: 12px;
+}
+
+.FormContainer textarea:focus {
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+.FormContainer label {
+  font-size: 12px;
+  padding: 8px 0px 8px 0px;
+  border-radius: 4px;
+}
+
+.FormContainer textarea {
+  padding: 8px;
+  resize: none;
+  border: 2px solid #d3d3d3;
+  border-radius: 4px;
+}
 .ContactContainer {
   padding: 32px;
   display: flex;
@@ -23,59 +59,6 @@
   text-decoration: none;
   display: block;
   color: #1a1a1a;
-}
-
-.FormContainer {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  padding: 16px;
-  flex: 1;
-  background: rgba(111, 111, 111, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.5px);
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.27);
-}
-
-.FormContainer textarea {
-  font-family: sans-serif;
-  outline: none;
-  font-size: 12px;
-}
-
-.FormContainer textarea:focus {
-  border: 2px solid grey;
-  border-radius: 4px;
-}
-
-.FormContainer label {
-  font-size: 12px;
-  padding: 8px 0px 8px 0px;
-  border-radius: 4px;
-}
-
-.FormContainer textarea {
-  padding: 8px;
-  resize: none;
-  border: 2px solid #d3d3d3;
-  border-radius: 4px;
-}
-
-.FormButton {
-  height: 40px;
-  width: 200px;
-  align-self: flex-end;
-  margin-top: 16px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #444;
-  transition: opacity 0.3s;
-  border-radius: 8px;
-}
-.FormButton:hover {
-  opacity: 0.9;
-  transition: opacity 0.3s;
 }
 
 .ContactButton {
@@ -125,9 +108,18 @@
 .ContactInfoContainer {
   display: flex;
   flex-direction: column;
-  padding-right: 64px;
+  padding-right: 32px;
   flex: 1;
   padding-left: 0px;
+}
+
+.ContactLocation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  cursor: default;
 }
 
 @media (max-width: 768px) {
