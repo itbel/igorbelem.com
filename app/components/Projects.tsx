@@ -2,8 +2,8 @@ import Image from "next/image";
 import styles from "./Projects.module.css";
 export default function Projects() {
   return (
-    <div className={styles.ProjectsContainer}>
-      <h1 className={styles.ProjectHeadingText}>Projects</h1>
+    <div id="projects" className={styles.ProjectsContainer}>
+      <h2 className={styles.ProjectHeadingText}>Projects</h2>
       <div className={styles.ProjectsSubContainer}>
         <Project
           name={"Bolao"}
@@ -45,7 +45,7 @@ type ProjectProps = {
 };
 const Project = ({ name, description, repo, pic, demo }: ProjectProps) => {
   return (
-    <article id="projects" className={styles.Project}>
+    <article className={styles.Project}>
       <figure>
         <a target="_blank" href={pic} rel="noopener noreferrer">
           <Image

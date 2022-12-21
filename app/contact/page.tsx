@@ -3,6 +3,7 @@ import { useState } from "react";
 import Spinner from "../components/Spinner";
 import styles from "./Contact.module.css";
 import Image from "next/image";
+import Input from "../components/Input";
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,8 +13,11 @@ export default function Contact() {
     <div className={styles.ContactContainer}>
       <div className={styles.ContactInfoContainer}>
         <div style={{ flex: 1 }}>
-          <h1>Contact me</h1>
-          <p>Feel free to contact me and I&apos;ll respond as soon as I can</p>
+          <h1> Need to get in touch?</h1>
+          <p>
+            Don&apos;t hesitate to send me a message and I&apos;ll respond as
+            soon as I can. Looking forward to chatting!
+          </p>
         </div>
 
         <div className={styles.ContactButton}>
@@ -32,7 +36,15 @@ export default function Contact() {
             igortbelem@gmail.com
           </a>
         </div>
-        <div className={styles.ContactButton}>
+        <div
+          style={{
+            flexDirection: "row",
+            display: "flex",
+            marginTop: 16,
+            marginBottom: 16,
+            cursor: "default",
+          }}
+        >
           <Image
             width={25}
             height={25}
@@ -76,33 +88,30 @@ export default function Contact() {
         </div>
       </div>
       <form className={styles.FormContainer} action="/api/email">
-        <label htmlFor="name">Your Name</label>
-        <div className={styles.FormInputWithIcon}>
-          <Image width={20} height={20} src="/assets/person.svg" alt="arrow" />
-          <input
-            required
-            onChange={(e) => setName(e.target.value)}
-            placeholder=""
-            value={name}
-            type="text"
-            id="name"
-            name="name"
-          />
-        </div>
-
-        <label htmlFor="email">Email Address</label>
-        <div className={styles.FormInputWithIcon}>
-          <Image width={20} height={20} src="/assets/email.svg" alt="arrow" />
-          <input
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder=""
-            value={email}
-            type="text"
-            id="email"
-            name="email"
-          />
-        </div>
+        <Input
+          required
+          iconAlt="Person Icon"
+          iconSrc="/assets/person.svg"
+          label="Name"
+          placeholder="Your name"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          type="text"
+          id="name"
+          name="name"
+        />
+        <Input
+          required
+          iconAlt="Email Icon"
+          iconSrc="/assets/email.svg"
+          label="Email Address"
+          placeholder="Your email address"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          type="text"
+          id="email"
+          name="email"
+        />
 
         <label htmlFor="message">Message</label>
         <textarea

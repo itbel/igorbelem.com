@@ -1,21 +1,24 @@
 import styles from "./Blog.module.css";
-
-type Post = {
-  id: string;
+import Image from "next/image";
+import Link from "next/link";
+import BlogPost from "../components/BlogPost";
+import Spinner from "../components/Spinner";
+export type BlogSitePost = {
+  _id: string;
   title: string;
   image: string;
   content: string;
   author: string;
+  publishedDate: string;
+  summary: string;
 };
 
-async function getPosts(): Promise<Post[]> {
+async function getPosts(): Promise<BlogSitePost[]> {
   const uri =
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
       : process.env.API_PROD_URI;
-  const response = await fetch(`${uri}/api/blogs`, {
-    cache: "no-store",
-  });
+  const response = await fetch(`${uri}/api/blog`);
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -24,19 +27,16 @@ async function getPosts(): Promise<Post[]> {
   return posts ?? [];
 }
 
-export default async function Blog() {
+export default async function Blogs() {
   const posts = await getPosts();
   return (
-    <div className={styles.PostsContainer}>
-      {posts.map((post) => (
-        <div className={styles.Post} key={post.id}>
-          <img width={200} height={200} src={post.image} alt={post.title} />
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-          <p>{post.author}</p>
-          <button>Read More</button>
-        </div>
-      ))}
+    <div className={styles.BlogContainer}>
+      <h1>Latest blog posts</h1>
+      <div className={styles.BlogPostsContainer}>
+        {posts.map((post) => {
+          return <BlogPost key={post._id} post={post} />;
+        })}
+      </div>
     </div>
   );
 }
