@@ -18,9 +18,12 @@ async function getPosts(): Promise<BlogSitePost[]> {
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
       : process.env.API_PROD_URI;
-  const response = await fetch(`${uri}/api/blog`);
+  const response = await fetch(`${uri}/api/blog`, {
+    cache: "no-store",
+  });
   if (!response.ok) {
-    throw new Error("Failed to fetch data");
+    console.log(response.statusText);
+    throw new Error("Failed to fetch blogs");
   }
   const json: any = await response.json();
   const { posts } = json;
