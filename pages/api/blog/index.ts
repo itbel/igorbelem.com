@@ -5,9 +5,11 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   try {
+    console.log("Fetching blog posts.... ");
     const client = await clientPromise;
     const db = client.db("portfolio");
     const posts = await db.collection("posts").find({}).toArray();
+    console.log("posts", posts);
     res.status(200).json({ posts });
   } catch (error) {
     console.error({ error });
