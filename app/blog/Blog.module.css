@@ -6,11 +6,17 @@
 
 .BlogPostsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 16px;
   row-gap: 16px;
 }
 
 .BlogContainer h1 {
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .BlogPostsContainer {
+    grid-template-columns: 1fr;
+  }
 }

@@ -31,7 +31,7 @@ export default async function Blogs() {
   const posts = await getPosts();
   return (
     <div className={styles.BlogContainer}>
-      <h1>Latest blog posts</h1>
+      <h1>Blog</h1>
       <div className={styles.BlogPostsContainer}>
         {posts.map((post) => {
           return <BlogPost key={post._id} post={post} />;

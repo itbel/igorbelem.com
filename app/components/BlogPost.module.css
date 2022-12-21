@@ -9,6 +9,7 @@
   -webkit-backdrop-filter: blur(12.3px);
   border: 1px solid rgba(255, 255, 255, 0.35);
   height: 500px;
+  min-width: 300px;
   overflow: hidden;
   text-decoration: none;
   cursor: default;
@@ -20,11 +21,13 @@
 }
 .BlogPost img {
   object-fit: contain;
+  align-self: center;
   padding: 16px;
 }
 .BlogPostContent {
   padding: 16px;
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -42,11 +45,12 @@
   font-family: Georgia;
   line-height: 24px;
   font-size: 14px;
-  flex: 1;
 }
 
 .Summary {
   margin-top: 16px;
+  display: flex;
+  flex: 1;
 }
 .Button {
   margin-top: 16px;
