@@ -15,7 +15,7 @@ async function getCovidData(): Promise<{ data: any; headers: any }> {
     },
   });
   const json: any = await response.json();
-  return { data: json.body, headers: json.body[0] };
+  return { data: json?.body ?? [], headers: json?.body?.[0] ?? {} };
 }
 
 export default async function Covid() {
