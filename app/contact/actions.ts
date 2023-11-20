@@ -59,9 +59,10 @@ export async function sendEmail(prevState: any, formData: FormData) {
     const data = await client.send(command);
     if (data.$metadata.httpStatusCode !== 200)
       return { message: "Failed to send e-mail" }
-    return redirect('/contact/success')
   } catch (error) {
     console.error({ error });
-    return { message: "Failed to send e-mail" }
+    throw error;
   }
+  return redirect('/contact/success')
+  
 }
