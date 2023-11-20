@@ -4,7 +4,7 @@ async function getCovidData() {
   const uri =
     process.env.NODE_ENV === "development"
       ? process.env.API_DEV_URI
-      : process.env.API_PROD_URI;
+      : '';
   const response = await fetch(`${uri}/api/covid`, { cache: "no-store" });
   if (!response.ok) {
     console.log(response.statusText);
@@ -22,7 +22,7 @@ export default async function Covid() {
       <table style={{ borderSpacing: 0 }} className={styles.tableTheme}>
         <thead>
           <tr className={styles.tableRow}>
-            {Object.keys(headers).map((key) => (
+            {Object.keys(headers)?.map((key) => (
               <th className={styles.tableHeader} key={key}>
                 {key}
               </th>

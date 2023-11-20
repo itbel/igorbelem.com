@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Error({
@@ -18,6 +19,7 @@ export default function Error({
     <div style={{ textAlign: "center", marginTop: 120 }}>
       <p>Something went wrong!</p>
       <p>Please try again later...</p>
+      <p>Click <Link href="/">here</Link> to go back</p>
     </div>
   );
 }
