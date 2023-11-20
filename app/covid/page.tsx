@@ -1,17 +1,21 @@
 import styles from "./covid.module.css";
 
-async function getCovidData() {
-  const uri =
-    process.env.NODE_ENV === "development"
-      ? process.env.API_DEV_URI
-      : process.env.API_PROD_URI;
-  const response = await fetch(`${uri}/api/covid`);
-  if (!response.ok) {
-    console.log(response.statusText);
-    throw new Error("Failed to fetch covid data");
+async function getCovidData(): Promise<{ data: any; headers: any }> {
+  const xApiKey = process.env.API_GATEWAY_KEY ?? "";
+  const covidURI = process.env.API_GATEWAY_COVID_URI ?? "";
+  if (xApiKey === "" || covidURI === "") {
+    return {data: [], headers: {}};
   }
+  const response = await fetch(covidURI, {
+    method: "get",
+    mode: "cors",
+    headers: {
+      "x-api-key": xApiKey,
+      "Content-Type": "application/json",
+    },
+  });
   const json: any = await response.json();
-  return json;
+  return { data: json.body, headers: json.body[0] };
 }
 
 export default async function Covid() {

@@ -3,50 +3,24 @@ import { useState } from "react";
 import Spinner from "../components/Spinner";
 import styles from "./Form.module.css";
 import Input from "../components/Input";
-import { useRouter } from "next/navigation";
-type SendEmailParams = {
-  name: string;
-  email: string;
-  message: string;
-};
-async function sendEmail({ name, email, message }: SendEmailParams) {
-  const res = await fetch("/api/email", {
-    method: "POST",
-    body: JSON.stringify({ name, email, message }),
-  });
-  return res;
-}
+import { sendEmail } from "./actions";
+import { useFormState, useFormStatus } from "react-dom";
+import FormButton from "../components/FormButton";
+
+
+
 export default function Contact() {
-  const router = useRouter();
+  const [state, formAction] = useFormState(sendEmail, {message: ''});
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [body, setBody] = useState("");
   return (
     <form
       style={{
         display: "flex",
         flexDirection: "column",
       }}
-      onSubmit={async (e) => {
-        e.preventDefault();
-        setErrorMessage("");
-        setIsLoading(true);
-        try {
-          const response = await sendEmail({ name, email, message });
-          if (!response.ok) {
-            const { message } = await response.json();
-            setErrorMessage(message);
-          } else {
-            setIsLoading(false);
-            router.push("/contact/success");
-          }
-        } catch (error) {
-          setErrorMessage("An error occurred..");
-          setIsLoading(false);
-        }
-      }}
+      action={formAction}
     >
       <Input
         required
@@ -55,7 +29,6 @@ export default function Contact() {
         label="Name"
         placeholder="Your name"
         onChange={(e) => {
-          setErrorMessage("");
           setName(e.target.value);
         }}
         value={name}
@@ -70,7 +43,6 @@ export default function Contact() {
         label="Email Address"
         placeholder="Your email address"
         onChange={(e) => {
-          setErrorMessage("");
           setEmail(e.target.value);
         }}
         value={email}
@@ -82,10 +54,9 @@ export default function Contact() {
       <label htmlFor="message">Message</label>
       <textarea
         required
-        value={message}
+        value={body}
         onChange={(e) => {
-          setErrorMessage("");
-          setMessage(e.target.value);
+          setBody(e.target.value);
         }}
         id="message"
         placeholder="Start typing your message..."
@@ -94,13 +65,11 @@ export default function Contact() {
       />
       <Spinner />
       <div className={styles.ButtonContainer}>
-        {errorMessage ? (
-          <p className={styles.ErrorMessage}>{errorMessage}</p>
+        {state?.message ? (
+          <p className={styles.ErrorMessage}>{state?.message}</p>
         ) : null}
 
-        <button className={styles.FormButton} type="submit">
-          {isLoading ? <Spinner size="small" /> : "Send Message"}
-        </button>
+        <FormButton />
       </div>
     </form>
   );

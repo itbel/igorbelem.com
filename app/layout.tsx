@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
-import { AnalyticsWrapper } from "./components/Analytics";
 import NavBar from "./components/NavBar";
 const lato = Lato({
   subsets: ["latin-ext"],
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body>
         <NavBar />
         <main>{children}</main>
-        <AnalyticsWrapper />
       </body>
     </html>
   );
