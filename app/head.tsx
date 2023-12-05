@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 export default function Head() {
   return (
     <>
@@ -48,11 +46,6 @@ export default function Head() {
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/manifest.json" />
-      <Script
-        async
-        src="https://us.umami.is/script.js"
-        data-website-id="8401aa20-ed82-46cd-8c02-80949b573910"
-      ></Script>
     </>
   );
 }
