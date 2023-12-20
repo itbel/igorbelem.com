@@ -4,7 +4,7 @@ async function getCovidData(): Promise<{ data: any; headers: any }> {
   const xApiKey = process.env.API_GATEWAY_KEY ?? "";
   const covidURI = process.env.API_GATEWAY_COVID_URI ?? "";
   if (xApiKey === "" || covidURI === "") {
-    return {data: [], headers: {}};
+    return { data: [], headers: {} };
   }
   const response = await fetch(covidURI, {
     method: "get",
@@ -14,8 +14,9 @@ async function getCovidData(): Promise<{ data: any; headers: any }> {
       "Content-Type": "application/json",
     },
   });
-  const json: any = await response.json();
-  return { data: json?.body ?? [], headers: json?.body?.[0] ?? {} };
+  const json = await response.json();
+  const records = json?.body ?? [];
+  return { data: records, headers: json?.body?.[0] ?? {} };
 }
 
 export default async function Covid() {

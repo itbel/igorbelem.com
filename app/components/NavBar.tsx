@@ -14,6 +14,10 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   {
+    href: "/",
+    label: "Home",
+  },
+  {
     href: "/#about",
     label: "About",
   },
@@ -55,8 +59,8 @@ export default function NavBar() {
           {navLinks.map(({ href, label }) => {
             const isActiveStyle = pathname?.includes(href)
               ? {
-                  textShadow: "0 0 1px #c33232",
-                  color: "#c33232",
+                  // textShadow: "0 0 1px #c33232",
+                  // color: "#c33232",
                 }
               : {};
             return (
