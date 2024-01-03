@@ -13,6 +13,7 @@ async function getCovidData(): Promise<{ data: any; headers: any }> {
       "x-api-key": xApiKey,
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
   const json = await response.json();
   const records = json?.body ?? [];
@@ -41,7 +42,7 @@ export default async function Covid() {
                 animationDuration: `${0.2 + index * 0.1}s`,
               }}
               className={styles.tableRow}
-              key={row.date + index}
+              key={row.date}
             >
               {Object.keys(row).map((key) => (
                 <td className={styles.tableCell} key={key}>
